@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/favicon-original.png">
+  <link rel="apple-touch-icon" href="images/favicon-original.png">
+  <title>Celebso Group - Terms &amp; Conditions</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #fcfbf9;
+      color: #0f172a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-top: 110px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      height: auto;
+      border: 0;
+      background: transparent;
+      position: fixed;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1180px, calc(100% - 48px));
+      max-width: min(1180px, calc(100% - 48px));
+      padding: 0 20px;
+      z-index: 100;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover img {
+      transform: scale(1.05);
+    }
+
+    nav {
+      justify-self: center;
+      width: min(680px, 100%);
+      height: 54px;
+      padding: 0 14px;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.75);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4), 0 0 36px rgba(15, 23, 42, 0.08);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+    }
+
+    nav a:not(.btn-funding),
+    nav a:not(.btn-funding):visited {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      white-space: nowrap;
+      color: #334155;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 6px 3px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:not(.btn-funding)::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: #ff5023;
+      transition: width 0.3s ease, left 0.3s ease;
+      box-shadow: 0 0 8px rgba(255, 80, 35, 0.5);
+    }
+
+    nav a:not(.btn-funding):hover,
+    nav a.active {
+      color: #ff5023;
+    }
+
+    nav a:not(.btn-funding):hover::after,
+    nav a.active::after {
+      width: 100%;
+      left: 0;
+    }
+
+    .btn-funding {
+      height: 54px;
+      border: 1px solid rgba(245, 166, 35, 0.7);
+      border-radius: 999px;
+      background: linear-gradient(135deg, #facc15, #f5a623);
+      box-shadow: inset 0 0 22px rgba(250, 204, 21, 0.15), 0 0 24px rgba(245, 166, 35, 0.3);
+      color: #0f172a;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 0 24px;
+      white-space: nowrap;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-funding::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #0f172a;
+      box-shadow: 0 0 16px 6px rgba(245, 166, 35, 0.55);
+    }
+
+    .btn-funding:hover {
+      transform: translateY(-2px);
+      box-shadow: inset 0 0 22px rgba(250, 204, 21, 0.2), 0 8px 30px rgba(245, 166, 35, 0.42);
+    }
+
+    header.nav-hidden {
+      transform: translate(-50%, -130%);
+      transition: transform 0.35s ease;
+    }
+
+    header {
+      transition: transform 0.35s ease;
+    }
+
+    .terms-hero {
+      padding: 44px 0 34px;
+      text-align: center;
+    }
+
+    .tag-orange {
+      color: #e05329;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .terms-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: 0.95;
+      letter-spacing: 0;
+      color: #101827;
+      margin-bottom: 22px;
+    }
+
+    .terms-hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #64748b;
+      font-size: 17px;
+    }
+
+    .dot {
+      color: #ff5023;
+    }
+
+    .terms-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 26px;
+      padding: 10px 18px;
+      border: 1px solid rgba(224, 83, 41, 0.2);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      color: #475569;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
+    }
+
+    .terms-meta i {
+      color: #ff5023;
+    }
+
+    .terms-layout {
+      display: grid;
+      grid-template-columns: minmax(210px, 270px) minmax(0, 1fr);
+      gap: 34px;
+      align-items: start;
+      margin: 28px 0 76px;
+    }
+
+    .terms-sidebar {
+      position: sticky;
+      top: 104px;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.07);
+      padding: 18px;
+      max-height: calc(100vh - 128px);
+      overflow: hidden;
+    }
+
+    .terms-sidebar h2 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.1px;
+      color: #0f172a;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #eef2f7;
+    }
+
+    .sidebar-links {
+      display: grid;
+      gap: 2px;
+      max-height: calc(100vh - 218px);
+      overflow-y: auto;
+      padding-right: 6px;
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e1 transparent;
+    }
+
+    .sidebar-links::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .sidebar-links::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .sidebar-links::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 999px;
+    }
+
+    .terms-sidebar a {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 7px 9px;
+      border: 0;
+      border-radius: 7px;
+      color: #64748b;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.25;
+      transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    }
+
+    .terms-sidebar a::before {
+      content: attr(data-num);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #f8fafc;
+      color: #94a3b8;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .terms-sidebar a:hover {
+      color: #ff5023;
+      background: #fff7f3;
+      transform: translateX(2px);
+    }
+
+    .terms-sidebar a:hover::before {
+      background: #ff5023;
+      color: #ffffff;
+    }
+
+    .terms-content {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.07);
+      padding: clamp(26px, 4vw, 48px);
+    }
+
+    .terms-section {
+      padding: 0 0 30px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #e2e8f0;
+      scroll-margin-top: 120px;
+    }
+
+    .terms-section:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .terms-section h2 {
+      font-size: clamp(21px, 2vw, 28px);
+      color: #101827;
+      letter-spacing: 0;
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    .terms-section p {
+      color: #475569;
+      font-size: 15.5px;
+      margin-bottom: 12px;
+    }
+
+    .terms-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .terms-section ul,
+    .terms-section ol {
+      padding-left: 22px;
+      margin: 12px 0 16px;
+      color: #475569;
+    }
+
+    .terms-section li {
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    .contact-box {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+      padding: 18px;
+      border: 1px solid rgba(224, 83, 41, 0.18);
+      border-radius: 8px;
+      background: #fff8f4;
+      color: #334155;
+    }
+
+    .contact-box strong {
+      color: #0f172a;
+    }
+
+    .nxt-footer-section {
+      background: url('images/footer-bg.png') center 30%/cover no-repeat #080c14;
+      position: relative;
+      padding: 50px 20px 30px;
+      color: #ffffff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .nxt-footer-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(255, 80, 35, 0.08) 0%, transparent 50%),
+        linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(8, 12, 20, 0.85) 100%);
+      z-index: 1;
+    }
+
+    .nxt-footer-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .nxt-logo-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 10px 24px;
+      border-radius: 30px;
+      margin-bottom: 12px;
+    }
+
+    .nxt-logo-pill img {
+      height: 28px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nxt-tagline {
+      font-size: 11px;
+      color: #94a3b8;
+      letter-spacing: 1px;
+      margin-bottom: 28px;
+      font-weight: 500;
+    }
+
+    .footer-links-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px 0;
+      margin-bottom: 20px;
+    }
+
+    .footer-links-row a {
+      color: #94a3b8;
+      font-size: 11px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 4px 12px;
+      transition: color 0.2s;
+    }
+
+    .footer-links-row a:hover,
+    .footer-links-row a.active {
+      color: #ffffff;
+    }
+
+    .footer-links-row .sep {
+      color: #334155;
+      font-size: 9px;
+    }
+
+    .footer-email {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-bottom: 22px;
+      font-weight: 500;
+    }
+
+    .footer-email i {
+      color: #ff5023;
+      margin-right: 6px;
+    }
+
+    .social-icons-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .social-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.04);
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .social-btn:hover {
+      background: #ff3b1d;
+      border-color: #ff3b1d;
+      color: #ffffff;
+    }
+
+    .copyright-text {
+      font-size: 9.5px;
+      color: #475569;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+      will-change: opacity, transform;
+    }
+
+    [data-reveal].in-view {
+      opacity: 1;
+      transform: none;
+    }
+
+    .menu-toggle,
+    .mobile-only-btn {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .terms-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .terms-sidebar {
+        position: static;
+        max-height: none;
+      }
+
+      .terms-sidebar .sidebar-links {
+        display: flex;
+        gap: 8px;
+        max-height: none;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0 0 4px;
+      }
+
+      .terms-sidebar a {
+        grid-template-columns: 22px max-content;
+        min-width: max-content;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-top: 96px;
+      }
+
+      header {
+        grid-template-columns: 1fr auto !important;
+        gap: 0 !important;
+        width: calc(100% - 24px) !important;
+        padding: 8px 12px;
+        top: 10px;
+      }
+
+      .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #0f172a;
+        border-radius: 4px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      header.menu-open .menu-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      header.menu-open .menu-toggle span:nth-child(2) { opacity: 0; }
+      header.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+      header > nav {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+        padding: 0;
+        gap: 0;
+        border: none;
+        border-bottom: 1px solid #e2e8f0;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        z-index: 200;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+      }
+
+      header.menu-open > nav {
+        max-height: 400px;
+        padding: 8px 0 0;
+      }
+
+      header > nav a:not(.btn-funding) {
+        justify-content: center;
+        padding: 14px 24px;
+        font-size: 14px;
+        border-bottom: 1px solid #f1f5f9;
+        width: 100%;
+      }
+
+      header > nav a:not(.btn-funding):last-of-type {
+        border-bottom: none;
+      }
+
+      .desktop-only-btn {
+        display: none !important;
+      }
+
+      .mobile-only-btn {
+        display: inline-flex !important;
+        margin: 0 16px 12px;
+        width: calc(100% - 32px) !important;
+        height: 48px !important;
+        justify-content: center;
+      }
+
+      .terms-sidebar .sidebar-links { grid-template-columns: none; }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .terms-hero {
+        padding: 24px 0 18px;
+      }
+
+      .terms-hero p {
+        font-size: 14px;
+      }
+
+      .terms-meta {
+        width: 100%;
+        justify-content: center;
+        border-radius: 8px;
+      }
+
+      .terms-content,
+      .terms-sidebar {
+        padding: 20px 18px;
+      }
+    }
+
+
+    /* ================== PROJECT-WIDE MOBILE FIXES ================== */
+    img, video, iframe {
+      max-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      body {
+        padding-top: 92px !important;
+      }
+
+      .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+
+      header#site-header {
+        position: fixed !important;
+        top: 10px !important;
+        left: 12px !important;
+        right: 12px !important;
+        width: auto !important;
+        max-width: none !important;
+        transform: none !important;
+        grid-template-columns: minmax(0, 1fr) 40px !important;
+        gap: 8px !important;
+        align-items: center !important;
+        padding: 8px 12px !important;
+        border-radius: 22px !important;
+        background: rgba(255, 255, 255, 0.92) !important;
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12) !important;
+        backdrop-filter: blur(18px) !important;
+        -webkit-backdrop-filter: blur(18px) !important;
+      }
+
+      header#site-header.nav-hidden {
+        transform: translateY(-130%) !important;
+      }
+
+      header#site-header .logo {
+        min-width: 0 !important;
+      }
+
+      header#site-header .logo img {
+        max-width: 150px !important;
+        height: 36px !important;
+        object-fit: contain !important;
+      }
+
+      header#site-header > nav {
+        position: fixed !important;
+        top: 62px !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        gap: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        border-top: 1px solid #eef2f7 !important;
+        border-radius: 0 0 18px 18px !important;
+        background: rgba(255, 255, 255, 0.98) !important;
+        box-shadow: 0 18px 34px rgba(15, 23, 42, 0.14) !important;
+        overflow: hidden !important;
+        max-height: 0 !important;
+        transition: max-height 0.35s ease, padding 0.35s ease !important;
+      }
+
+      header#site-header.menu-open > nav {
+        max-height: 460px !important;
+        padding: 8px 0 10px !important;
+      }
+
+      header#site-header > nav a:not(.btn-funding) {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 13px 18px !important;
+        border-bottom: 1px solid #f1f5f9 !important;
+        font-size: 13px !important;
+        line-height: 1.2 !important;
+        white-space: normal !important;
+        text-align: center !important;
+      }
+
+      header#site-header > nav a:not(.btn-funding)::after {
+        display: none !important;
+      }
+
+      .desktop-only-btn {
+        display: none !important;
+      }
+
+      .mobile-only-btn {
+        display: inline-flex !important;
+        width: calc(100% - 32px) !important;
+        height: 46px !important;
+        margin: 10px 16px 0 !important;
+        justify-content: center !important;
+      }
+
+      .menu-toggle {
+        display: flex !important;
+        width: 40px !important;
+        height: 40px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-direction: column !important;
+        gap: 5px !important;
+      }
+
+      section,
+      main,
+      footer {
+        max-width: 100% !important;
+      }
+
+      [class*="grid"],
+      [class*="Grid"],
+      [class*="cards"],
+      [class*="Cards"] {
+        max-width: 100% !important;
+      }
+
+      img,
+      video {
+        height: auto;
+      }
+
+      input,
+      select,
+      textarea,
+      button {
+        max-width: 100%;
+      }
+
+      [class*="marquee"],
+      [class*="track"],
+      [class*="slider"],
+      [class*="carousel"] {
+        max-width: 100vw !important;
+      }
+
+      h1,
+      h2,
+      h3,
+      p,
+      li,
+      a,
+      span {
+        overflow-wrap: anywhere;
+      }
+    }
+
+    @media (max-width: 560px) {
+      body {
+        padding-top: 86px !important;
+      }
+
+      header#site-header {
+        left: 10px !important;
+        right: 10px !important;
+        padding: 7px 10px !important;
+      }
+
+      header#site-header .logo img {
+        max-width: 132px !important;
+        height: 34px !important;
+      }
+
+      h1 {
+        font-size: clamp(30px, 11vw, 42px) !important;
+        line-height: 1.04 !important;
+        letter-spacing: 0 !important;
+      }
+
+      h2 {
+        font-size: clamp(24px, 8vw, 34px) !important;
+        line-height: 1.12 !important;
+        letter-spacing: 0 !important;
+      }
+
+      p,
+      li {
+        overflow-wrap: anywhere;
+      }
+    }    @media (prefers-reduced-motion: reduce) {
+      [data-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header id="site-header">
+      <a href="index.html" class="logo" style="text-decoration:none;">
+        <img src="images/ChatGPT Image Sep 13, 2026, 11_50_32 PM.png" alt="Celebso" style="height: 40px; width: auto; object-fit: contain;">
+      </a>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="patner.html">Partners</a>
+        <a href="VENTURES.html">Ventures</a>
+        <a href="contact.html" class="btn-funding mobile-only-btn">Contact Us</a>
+      </nav>
+      <a href="contact.html" class="btn-funding desktop-only-btn">Contact Us</a>
+      <button class="menu-toggle" aria-label="Toggle Menu" onclick="document.getElementById('site-header').classList.toggle('menu-open')">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <section class="terms-hero" data-reveal>
+      <span class="tag-orange">LEGAL</span>
+      <h1>Terms &amp; Conditions<span class="dot">.</span></h1>
+      <p>These terms govern access to and use of Celebso Group websites, digital platforms, applications, products, services, events, programs and other offerings.</p>
+      <div class="terms-meta"><i class="fa-regular fa-calendar"></i> Last Updated: September 2026</div>
+    </section>
+
+    <main class="terms-layout">
+      <aside class="terms-sidebar" data-reveal>
+        <h2>On This Page</h2>
+        <div class="sidebar-links">
+          <a href="#introduction" data-num="01">Introduction</a>
+          <a href="#about" data-num="02">About Celebso Group</a>
+          <a href="#acceptance" data-num="03">Acceptance of Terms</a>
+          <a href="#eligibility" data-num="04">Eligibility</a>
+          <a href="#use" data-num="05">Use of Services</a>
+          <a href="#accounts" data-num="06">User Accounts</a>
+          <a href="#content" data-num="07">User-Generated Content</a>
+          <a href="#intellectual-property" data-num="08">Intellectual Property</a>
+          <a href="#ai" data-num="09">Artificial Intelligence</a>
+          <a href="#startup" data-num="10">Startup &amp; Investment Information</a>
+          <a href="#events" data-num="11">Events &amp; Networking</a>
+          <a href="#payments" data-num="12">Payments &amp; Purchases</a>
+          <a href="#subscriptions" data-num="13">Subscriptions</a>
+          <a href="#third-party" data-num="14">Third-Party Services</a>
+          <a href="#logos" data-num="15">Partner Logos</a>
+          <a href="#marketplace" data-num="16">Marketplace Services</a>
+          <a href="#privacy" data-num="17">Privacy &amp; Data Protection</a>
+          <a href="#security" data-num="18">Security</a>
+          <a href="#disclaimers" data-num="19">Disclaimers</a>
+          <a href="#liability" data-num="20">Liability</a>
+          <a href="#indemnification" data-num="21">Indemnification</a>
+          <a href="#termination" data-num="22">Suspension &amp; Termination</a>
+          <a href="#changes" data-num="23">Changes</a>
+          <a href="#law" data-num="24">Governing Law</a>
+          <a href="#severability" data-num="25">Severability</a>
+          <a href="#entire-agreement" data-num="26">Entire Agreement</a>
+          <a href="#contact" data-num="27">Contact Us</a>
+          <a href="#acknowledgement" data-num="28">Acknowledgement</a>
+        </div>
+      </aside>
+
+      <article class="terms-content">
+        <section class="terms-section" id="introduction">
+          <h2>1. Introduction</h2>
+          <p>Welcome to Celebso Group.</p>
+          <p>These Terms &amp; Conditions ("Terms") govern your access to and use of the websites, digital platforms, applications, products, services, events, programs and other offerings operated, owned, managed or provided by Celebso Group and its associated brands and platforms ("Celebso", "Celebso Group", "we", "us" or "our").</p>
+          <p>By accessing, browsing, registering on or using any Celebso website, platform, application, service, program or event, you acknowledge that you have read, understood and agreed to these Terms.</p>
+          <p>If you do not agree with these Terms, please do not use our services.</p>
+        </section>
+
+        <section class="terms-section" id="about">
+          <h2>2. About Celebso Group</h2>
+          <p>Celebso Group is a multi-platform technology and business ecosystem operating across areas including, but not limited to:</p>
+          <ul>
+            <li>Technology and software</li>
+            <li>Artificial Intelligence</li>
+            <li>Social and professional networking</li>
+            <li>Startup and entrepreneurship</li>
+            <li>Business growth and support</li>
+            <li>Media and production</li>
+            <li>Events and networking</li>
+            <li>Real estate and business infrastructure</li>
+            <li>Travel and lifestyle services</li>
+            <li>Data and digital services</li>
+            <li>Education and startup learning</li>
+            <li>Investment and funding-related initiatives</li>
+            <li>Other technology-enabled products and services</li>
+          </ul>
+          <p>Celebso Group may operate multiple brands, websites, applications, programs and services. Individual services or brands may have additional terms applicable specifically to them.</p>
+        </section>
+
+        <section class="terms-section" id="acceptance">
+          <h2>3. Acceptance of Terms</h2>
+          <p>By using any Celebso service, you confirm that:</p>
+          <ol>
+            <li>You have the legal capacity to accept these Terms.</li>
+            <li>The information provided by you is accurate and current.</li>
+            <li>You will comply with all applicable laws and regulations.</li>
+            <li>You will not use Celebso services for unlawful, fraudulent or unauthorized purposes.</li>
+            <li>You accept these Terms and any additional terms applicable to a particular service.</li>
+          </ol>
+          <p>If you are using Celebso on behalf of a company, organization or other legal entity, you represent that you have authority to bind that entity to these Terms.</p>
+        </section>
+
+        <section class="terms-section" id="eligibility">
+          <h2>4. Eligibility</h2>
+          <p>Unless a particular service specifies otherwise, Celebso services are intended for individuals who are legally capable of entering into contracts under applicable law.</p>
+          <p>Certain events, programs, competitions, educational services and other offerings may have additional age, eligibility, geographic or qualification requirements.</p>
+          <p>Celebso reserves the right to refuse or restrict access where applicable eligibility requirements are not satisfied.</p>
+        </section>
+
+        <section class="terms-section" id="use">
+          <h2>5. Use of Website and Services</h2>
+          <p>You agree to use Celebso websites, platforms and services only for lawful purposes.</p>
+          <p>You must not:</p>
+          <ul>
+            <li>Attempt to gain unauthorized access to our systems.</li>
+            <li>Interfere with website or platform security.</li>
+            <li>Introduce viruses, malware or harmful code.</li>
+            <li>Scrape, copy or systematically extract data without authorization.</li>
+            <li>Reverse engineer proprietary software except where legally permitted.</li>
+            <li>Impersonate another person or organization.</li>
+            <li>Create fraudulent or misleading accounts.</li>
+            <li>Use our services for scams, deception or unlawful activities.</li>
+            <li>Upload illegal, defamatory, threatening, abusive or infringing content.</li>
+            <li>Misuse networking, communication or marketplace features.</li>
+            <li>Attempt to disrupt our services, infrastructure or operations.</li>
+          </ul>
+          <p>Celebso may restrict, suspend or terminate access where we reasonably believe these Terms have been violated.</p>
+        </section>
+
+        <section class="terms-section" id="accounts">
+          <h2>6. User Accounts</h2>
+          <p>Certain Celebso services may require users to create an account.</p>
+          <p>Users are responsible for:</p>
+          <ul>
+            <li>Providing accurate information.</li>
+            <li>Maintaining the confidentiality of login credentials.</li>
+            <li>Maintaining account security.</li>
+            <li>Not sharing accounts in an unauthorized manner.</li>
+            <li>Notifying Celebso of suspected unauthorized access.</li>
+          </ul>
+          <p>Celebso may suspend or terminate accounts containing false information or accounts used in violation of these Terms.</p>
+        </section>
+
+        <section class="terms-section" id="content">
+          <h2>7. User-Generated Content</h2>
+          <p>Certain Celebso platforms may allow users to submit, upload, publish or share:</p>
+          <ul>
+            <li>Text</li>
+            <li>Images</li>
+            <li>Videos</li>
+            <li>Audio</li>
+            <li>Documents</li>
+            <li>Business information</li>
+            <li>Professional profiles</li>
+            <li>Reviews</li>
+            <li>Comments</li>
+            <li>Startup information</li>
+            <li>Other digital materials</li>
+          </ul>
+          <p>You retain ownership of content that you lawfully own.</p>
+          <p>By submitting content to Celebso, you grant Celebso a non-exclusive, worldwide, royalty-free license to host, store, reproduce, display, distribute, format and otherwise use such content as reasonably necessary to operate, provide, improve and promote the relevant service.</p>
+          <p>You represent that you have the necessary rights and permissions to submit such content.</p>
+        </section>
+
+        <section class="terms-section" id="intellectual-property">
+          <h2>8. Intellectual Property</h2>
+          <p>Unless otherwise stated, intellectual property associated with Celebso services is owned by or licensed to Celebso Group or its relevant partners.</p>
+          <p>This may include:</p>
+          <ul>
+            <li>Logos</li>
+            <li>Brand names</li>
+            <li>Trademarks</li>
+            <li>Website designs</li>
+            <li>Software</li>
+            <li>Source code</li>
+            <li>Graphics</li>
+            <li>Text</li>
+            <li>Images</li>
+            <li>Videos</li>
+            <li>Product concepts</li>
+            <li>User interfaces</li>
+            <li>Databases</li>
+            <li>Business materials</li>
+          </ul>
+          <p>You may not reproduce, modify, distribute, sell, publish or commercially exploit Celebso intellectual property without prior written permission, except where permitted by applicable law.</p>
+          <p>Third-party trademarks, logos and content remain the property of their respective owners.</p>
+        </section>
+
+        <section class="terms-section" id="ai">
+          <h2>9. Artificial Intelligence and Technology</h2>
+          <p>Some Celebso services may use Artificial Intelligence, machine learning, automation, data processing or other emerging technologies.</p>
+          <p>AI-generated or automated outputs may contain errors, inaccuracies or incomplete information.</p>
+          <p>Users should independently verify important information before making business, financial, legal, investment or other significant decisions.</p>
+          <p>Celebso does not guarantee that AI-generated information will always be accurate, complete, current or suitable for a particular purpose.</p>
+        </section>
+
+        <section class="terms-section" id="startup">
+          <h2>10. Startup, Business and Investment-Related Information</h2>
+          <p>Celebso may provide startup programs, educational content, networking opportunities, investor introductions, funding-related initiatives and business support.</p>
+          <p>Unless expressly stated in a separate written agreement:</p>
+          <ul>
+            <li>Celebso does not guarantee funding.</li>
+            <li>Celebso does not guarantee investment.</li>
+            <li>Celebso does not guarantee business success.</li>
+            <li>Participation in a program does not guarantee selection.</li>
+            <li>An introduction to an investor does not guarantee investment.</li>
+            <li>Business projections and estimates are not guarantees of future results.</li>
+          </ul>
+          <p>Users should conduct their own due diligence before entering into business, investment or commercial arrangements.</p>
+          <p>General information provided through Celebso does not constitute investment, financial, legal or tax advice. Where a regulated financial service is involved, applicable laws, licenses and regulatory requirements shall apply.</p>
+        </section>
+
+        <section class="terms-section" id="events">
+          <h2>11. Events and Networking Programs</h2>
+          <p>Celebso or its associated brands may organize founder events, investor networking events, conferences, workshops, business meetings, startup programs, educational events and professional gatherings.</p>
+          <p>Participation may be subject to registration, payment, invitation, eligibility or verification requirements.</p>
+          <p>Celebso reserves the right to:</p>
+          <ul>
+            <li>Approve or reject registrations.</li>
+            <li>Change event schedules.</li>
+            <li>Change venues.</li>
+            <li>Modify speakers or programs.</li>
+            <li>Cancel or postpone events.</li>
+            <li>Refuse entry where reasonably necessary for safety, security or compliance.</li>
+          </ul>
+          <p>Event-specific terms, cancellation policies and refund policies may also apply.</p>
+        </section>
+
+        <section class="terms-section" id="payments">
+          <h2>12. Payments and Purchases</h2>
+          <p>Certain Celebso services may require payment.</p>
+          <p>Before completing a transaction, applicable information may be provided regarding:</p>
+          <ul>
+            <li>Fees</li>
+            <li>Taxes</li>
+            <li>Subscription charges</li>
+            <li>Service duration</li>
+            <li>Payment terms</li>
+            <li>Refund conditions</li>
+            <li>Cancellation conditions</li>
+          </ul>
+          <p>Payments may be processed through third-party payment providers and may be subject to their respective terms. Applicable taxes and government charges may be payable by the customer where required.</p>
+        </section>
+
+        <section class="terms-section" id="subscriptions">
+          <h2>13. Subscriptions</h2>
+          <p>Certain Celebso services may be offered through subscriptions.</p>
+          <p>Where applicable, subscription terms may specify:</p>
+          <ul>
+            <li>Subscription period</li>
+            <li>Price</li>
+            <li>Renewal terms</li>
+            <li>Cancellation process</li>
+            <li>Applicable taxes</li>
+            <li>Refund conditions</li>
+          </ul>
+          <p>Celebso may modify subscription pricing prospectively, subject to applicable law and any applicable contractual requirements.</p>
+        </section>
+
+        <section class="terms-section" id="third-party">
+          <h2>14. Third-Party Services and Links</h2>
+          <p>Celebso websites and platforms may contain links, integrations or references to third-party websites, applications, payment providers, platforms or services. Celebso does not necessarily control or endorse third-party services.</p>
+          <p>Your use of third-party services is subject to the terms and policies of those third parties. Celebso is not responsible for the availability, accuracy, security or content of third-party services.</p>
+        </section>
+
+        <section class="terms-section" id="logos">
+          <h2>15. Partner, Sponsor and Third-Party Brand Logos</h2>
+          <p>Celebso Group may display the names, trademarks, logos and brand identities of organizations, companies, institutions, sponsors, partners, speakers, collaborators or other entities that have participated in, supported, sponsored, collaborated with or been associated with Celebso events, programs, initiatives or activities.</p>
+          <p>Such logos and brand names may be displayed for purposes including recognizing previous event sponsors and partners, demonstrating previous event participation or association, showcasing previous collaborations, providing historical information about Celebso activities, and presenting organizations associated with particular events or initiatives.</p>
+          <p>Unless expressly stated otherwise, the display of a third-party name or logo does not necessarily mean that the organization is a current partner of Celebso Group, maintains an ongoing commercial relationship with Celebso, endorses Celebso products or services, or currently sponsors Celebso.</p>
+          <p>Third-party trademarks, logos and brand names remain the property of their respective owners. Celebso Group does not claim ownership of such third-party intellectual property.</p>
+          <p>Where appropriate, Celebso may identify such organizations as Past Partners, Event Partners, Sponsors, Previous Collaborators or similar descriptions to provide context regarding the relationship.</p>
+          <p>Where required, Celebso Group may remove, modify or update a third-party logo or brand reference upon receiving a legitimate request from the relevant rights holder, subject to applicable contractual and legal obligations.</p>
+        </section>
+
+        <section class="terms-section" id="marketplace">
+          <h2>16. Marketplace and Partner Services</h2>
+          <p>Certain Celebso platforms may connect users with businesses, professionals, vendors, service providers, partners or other third parties. Unless expressly stated otherwise, Celebso may act as a technology platform or facilitator and not as the direct provider of every third-party service.</p>
+          <p>Users should independently verify:</p>
+          <ul>
+            <li>Service quality</li>
+            <li>Pricing</li>
+            <li>Availability</li>
+            <li>Credentials</li>
+            <li>Business claims</li>
+            <li>Deliverables</li>
+            <li>Contractual terms</li>
+          </ul>
+          <p>Transactions between users and third-party providers may be governed by separate agreements.</p>
+        </section>
+
+        <section class="terms-section" id="privacy">
+          <h2>17. Privacy and Data Protection</h2>
+          <p>Your use of Celebso services may involve the collection and processing of personal information. The collection, use, storage and processing of personal information is governed by the applicable Privacy Policy and relevant data protection laws.</p>
+          <p>By using our services, you acknowledge that information may be processed as described in the applicable Privacy Policy.</p>
+        </section>
+
+        <section class="terms-section" id="security">
+          <h2>18. Security</h2>
+          <p>Celebso takes reasonable measures to maintain the security of its systems and services. However, no internet transmission, digital platform or storage system can be guaranteed to be completely secure.</p>
+          <p>Users acknowledge that use of online services involves inherent technological and security risks.</p>
+        </section>
+
+        <section class="terms-section" id="disclaimers">
+          <h2>19. Disclaimers</h2>
+          <p>To the maximum extent permitted by applicable law, Celebso services are provided on an "as is" and "as available" basis.</p>
+          <p>Celebso does not guarantee that:</p>
+          <ul>
+            <li>The website will always be available.</li>
+            <li>Services will always be uninterrupted.</li>
+            <li>Information will always be error-free.</li>
+            <li>Content will always be complete or current.</li>
+            <li>Services will meet every user's individual requirements.</li>
+            <li>Results obtained from using our services will meet particular expectations.</li>
+          </ul>
+          <p>Nothing in these Terms excludes any rights or protections that cannot legally be excluded.</p>
+        </section>
+
+        <section class="terms-section" id="liability">
+          <h2>20. Limitation of Liability</h2>
+          <p>To the maximum extent permitted by applicable law, Celebso Group and its directors, officers, employees, affiliates, partners and service providers shall not be liable for indirect, incidental, consequential, special or punitive damages arising from or related to the use of our services.</p>
+          <p>Where liability cannot legally be excluded, it shall be limited to the maximum extent permitted under applicable law. Nothing in these Terms is intended to exclude liability that cannot legally be excluded.</p>
+        </section>
+
+        <section class="terms-section" id="indemnification">
+          <h2>21. Indemnification</h2>
+          <p>You agree to defend, indemnify and hold harmless Celebso Group, its affiliates, directors, officers, employees and representatives from claims, losses, liabilities, damages, costs and expenses arising from:</p>
+          <ul>
+            <li>Your violation of these Terms.</li>
+            <li>Your unlawful use of the services.</li>
+            <li>Your violation of another person's rights.</li>
+            <li>Content submitted by you.</li>
+            <li>Fraudulent or unauthorized activity conducted through your account.</li>
+          </ul>
+        </section>
+
+        <section class="terms-section" id="termination">
+          <h2>22. Suspension and Termination</h2>
+          <p>Celebso may suspend, restrict or terminate access to any service if:</p>
+          <ul>
+            <li>You breach these Terms.</li>
+            <li>You provide false or misleading information.</li>
+            <li>You engage in unlawful activity.</li>
+            <li>Your activity creates security or operational risks.</li>
+            <li>Suspension or termination is required by law.</li>
+            <li>The relevant service is discontinued.</li>
+          </ul>
+          <p>Termination may occur with or without notice where legally permitted. Provisions that by their nature should survive termination shall continue to apply.</p>
+        </section>
+
+        <section class="terms-section" id="changes">
+          <h2>23. Changes to Services and Terms</h2>
+          <p>Celebso Group may modify, update, suspend or discontinue any part of its website, platform, product or service. We may introduce new features or remove existing features.</p>
+          <p>Celebso may also update these Terms from time to time. The revised version will be published on the website with an updated "Last Updated" date.</p>
+          <p>Your continued use of the services after revised Terms become effective constitutes acceptance of the updated Terms, subject to applicable law.</p>
+        </section>
+
+        <section class="terms-section" id="law">
+          <h2>24. Governing Law and Jurisdiction</h2>
+          <p>These Terms shall be governed by and interpreted in accordance with the laws of India.</p>
+          <p>Subject to applicable law, disputes arising from these Terms or the use of Celebso services shall be subject to the jurisdiction of the competent courts in Jaipur, Rajasthan, India. Where applicable law requires a different dispute-resolution mechanism or jurisdiction, such mandatory requirements shall prevail.</p>
+        </section>
+
+        <section class="terms-section" id="severability">
+          <h2>25. Severability</h2>
+          <p>If any provision of these Terms is determined to be invalid, illegal or unenforceable, the remaining provisions shall continue to remain effective to the maximum extent permitted by law.</p>
+        </section>
+
+        <section class="terms-section" id="entire-agreement">
+          <h2>26. Entire Agreement</h2>
+          <p>These Terms, together with applicable Privacy Policy, Refund Policy, Cancellation Policy, Cookie Policy, service-specific terms and other policies published by Celebso, constitute the applicable agreement governing your use of Celebso services.</p>
+          <p>Where a separate written agreement exists between Celebso and a customer, partner, sponsor, investor, vendor or other party, that agreement may govern to the extent of any conflict.</p>
+        </section>
+
+        <section class="terms-section" id="contact">
+          <h2>27. Contact Us</h2>
+          <p>For general inquiries, business inquiries, partnerships, event-related communication, legal notices or other matters relating to Celebso Group, you may contact us using the details below.</p>
+          <div class="contact-box">
+            <p><strong>Celebso Group</strong></p>
+            <p>Celebso Startup Valley, Signature Tower, Lal Kothi, Jaipur, Rajasthan - 302015, India</p>
+            <p><strong>Phone:</strong> 9784626443</p>
+            <p><strong>Email:</strong> info@celebso.com</p>
+            <p><strong>Alternate Email:</strong> info.celebso@gmail.com</p>
+          </div>
+          <p>For general inquiries, business inquiries, partnerships, event-related communication, legal notices or other matters relating to Celebso Group, you may contact us using the details above.</p>
+        </section>
+
+        <section class="terms-section" id="acknowledgement">
+          <h2>28. Acknowledgement</h2>
+          <p>By accessing or using any Celebso Group website, platform, application, product, service, program or event, you acknowledge that you have read, understood and agreed to these Terms &amp; Conditions.</p>
+          <p>&copy; 2026 Celebso Group. All Rights Reserved.</p>
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <footer class="nxt-footer-section">
+    <div class="nxt-footer-content">
+      <div class="nxt-logo-pill">
+        <img src="images/ChatGPT Image Aug 18, 2026, 10_51_46 PM.png" alt="Celebso Group" style="height: 28px; width: auto; object-fit: contain;">
+      </div>
+
+      <div class="nxt-tagline">Building the Future Through Technology, Intelligence &amp; Innovation</div>
+
+      <div class="footer-links-row">
+        <a href="about.html">About Us</a>
+        <span class="sep">&bull;</span>
+        <a href="leadership.html">Leadership</a>
+        <span class="sep">&bull;</span>
+        <a href="VENTURES.html">Ventures</a>
+        <span class="sep">&bull;</span>
+        <a href="patner.html">Partners</a>
+        <span class="sep">&bull;</span>
+        <a href="news.html">News</a>
+        <span class="sep">&bull;</span>
+        <a href="terms-and-conditions.html" class="active">Terms &amp; Conditions</a>
+        <span class="sep">&bull;</span>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-email">
+        <i class="fa-regular fa-envelope"></i> info@celebso.com
+      </div>
+
+      <div class="social-icons-row">
+        <a href="https://www.instagram.com/celebsox" target="_blank" rel="noopener" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/celebso-group-4842a8300/" target="_blank" rel="noopener" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://x.com/Celebso_" target="_blank" rel="noopener" class="social-btn"><svg viewBox="0 0 512 512" width="12" height="12" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
+      </div>
+
+      <div class="copyright-text">&copy; 2026 Celebso Group. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('site-header');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+      const currentY = window.scrollY;
+      if (navbar.classList.contains('menu-open')) {
+        navbar.classList.remove('nav-hidden');
+        return;
+      }
+      if (currentY > lastScrollY && currentY > 100) {
+        navbar.classList.add('nav-hidden');
+      } else {
+        navbar.classList.remove('nav-hidden');
+      }
+      lastScrollY = currentY;
+    }, { passive: true });
+
+    navbar.querySelectorAll('nav a:not(.btn-funding)').forEach(link => {
+      link.addEventListener('click', () => navbar.classList.remove('menu-open'));
+    });
+
+    (function () {
+      const els = document.querySelectorAll('[data-reveal]');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(el => el.classList.add('in-view'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.01, rootMargin: '0px 0px -50px 0px' });
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
+</body>
+</html>
