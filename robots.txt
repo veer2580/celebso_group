@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap Location for Search Engines
+Sitemap: https://celebso.com/sitemap.xml
