@@ -1,11 +1,36 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="images/favicon-original.png">
-  <link rel="apple-touch-icon" href="images/favicon-original.png">
-  <title>Celebso Group - Ventures</title>
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Celebso Group Ventures - AI, Software, Space &amp; Next-Gen Companies</title>
+  <meta name="title" content="Celebso Group Ventures - AI, Software, Space &amp; Next-Gen Companies">
+  <meta name="description" content="Explore the innovative companies and portfolio ventures under Celebso Group spanning Artificial Intelligence, software engineering, space tech, and future innovation.">
+  <meta name="keywords" content="Celebso Ventures, AI portfolio, software companies, technology incubator, space tech innovation, Celebso companies">
+  <meta name="author" content="Celebso Group">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://celebso.com/VENTURES">
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://celebso.com/VENTURES">
+  <meta property="og:title" content="Celebso Group Ventures - AI, Software, Space &amp; Next-Gen Companies">
+  <meta property="og:description" content="Explore the innovative companies and portfolio ventures under Celebso Group spanning Artificial Intelligence, software engineering, space tech, and future innovation.">
+  <meta property="og:image" content="https://celebso.com//images/favicon-original.png">
+  <meta property="og:site_name" content="Celebso Group">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://celebso.com/VENTURES">
+  <meta name="twitter:title" content="Celebso Group Ventures - AI, Software, Space &amp; Next-Gen Companies">
+  <meta name="twitter:description" content="Explore the innovative companies and portfolio ventures under Celebso Group spanning Artificial Intelligence, software engineering, space tech, and future innovation.">
+  <meta name="twitter:image" content="https://celebso.com//images/favicon-original.png">
+  <meta name="twitter:site" content="@Celebso_">
+
+  <link rel="icon" type="image/png" href="/images/favicon-original.png">
+  <link rel="apple-touch-icon" href="/images/favicon-original.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1233,7 +1258,7 @@ body {
     }
   /* ===== FOOTER ===== */
     .nxt-footer-section {
-      background: url('images/footer-bg.png') center 30%/cover no-repeat #080c14;
+      background: url('/images/footer-bg.png') center 30%/cover no-repeat #080c14;
       position: relative;
       padding: 50px 20px 30px;
       color: #ffffff;
@@ -1368,6 +1393,11 @@ body {
       color: #475569;
       font-weight: 500;
       letter-spacing: 0.3px;
+    }
+
+    .copyright-text a {
+      text-decoration: none;
+      color: inherit;
     }
   /* ================== SCROLL REVEAL ANIMATIONS ================== */
     [data-reveal] {
@@ -1676,6 +1706,42 @@ body {
     }    @media (prefers-reduced-motion: reduce) {
       [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
     }
+
+    /* ================== HERO HUB MOBILE FIX ================== */
+    @media (max-width: 767px) {
+      .hero-right {
+        height: auto;
+      }
+      .hub-container {
+        flex-direction: column;
+        gap: 14px;
+        height: auto;
+        animation: none !important;
+      }
+      .hub-lines-svg {
+        display: none;
+      }
+      .hub-center {
+        margin-bottom: 4px;
+      }
+      .satellite {
+        position: static !important;
+        transform: none !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        width: 100%;
+        max-width: 360px;
+        gap: 10px;
+        padding: 8px 14px;
+        animation: none !important;
+      }
+      .satellite .sat-icon {
+        flex-shrink: 0;
+        animation: none !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1684,18 +1750,18 @@ body {
 
     <!-- ==================== 1. HEADER ==================== -->
     <header id="site-header">
-      <a href="index.html" class="logo" style="text-decoration:none;">
-        <img src="images/ChatGPT Image Sep 13, 2026, 11_50_32 PM.png" alt="Celebso" style="height: 40px; width: auto; object-fit: contain;">
+      <a href="/" class="logo" style="text-decoration:none;">
+        <img src="/images/ChatGPT Image Sep 13, 2026, 11_50_32 PM.png" alt="Celebso" style="height: 40px; width: auto; object-fit: contain;">
       </a>
       <nav>
-        <a href="about.html">About</a>
-        <a href="leadership.html">Leadership</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="patner.html">Partners</a>
-<a href="VENTURES.html" class="active">Ventures</a>
-      <a href="contact.html" class="btn-funding mobile-only-btn">Contact Us</a>
+        <a href="/about">About</a>
+        <a href="/leadership">Leadership</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/patner">Partners</a>
+<a href="/VENTURES" class="active">Ventures</a>
+      <a href="/contact" class="btn-funding mobile-only-btn">Contact Us</a>
     </nav>
-    <a href="contact.html" class="btn-funding desktop-only-btn">Contact Us</a>
+    <a href="/contact" class="btn-funding desktop-only-btn">Contact Us</a>
     <button class="menu-toggle" aria-label="Toggle Menu" onclick="document.getElementById('site-header').classList.toggle('menu-open')">
       <span></span><span></span><span></span>
     </button>
@@ -1754,17 +1820,17 @@ body {
           </div>
 
           <div class="satellite node-top">
-            <div class="sat-icon"><i class="fa-solid fa-microchip"></i></div>
+            <div class="sat-icon"><i class="fa-solid fa-video"></i></div>
             <div class="sat-text">
-              <span class="sat-name">ANTELLAY</span>
-              <span class="sat-cat">AI &middot; Technology</span>
+              <span class="sat-name">CELEBSO PRODUCTIONS</span>
+              <span class="sat-cat">Media &middot; Entertainment</span>
             </div>
           </div>
 
           <div class="satellite node-top-right">
             <div class="sat-icon"><i class="fa-solid fa-brain"></i></div>
             <div class="sat-text">
-              <span class="sat-name">NUMEREXX</span>
+              <span class="sat-name">NUMERIXX</span>
               <span class="sat-cat">Intelligence &middot; Data</span>
             </div>
           </div>
@@ -1778,10 +1844,10 @@ body {
           </div>
 
           <div class="satellite node-bottom-right">
-            <div class="sat-icon"><i class="fa-solid fa-video"></i></div>
+            <div class="sat-icon"><i class="fa-solid fa-microchip"></i></div>
             <div class="sat-text">
-              <span class="sat-name">CELEBSO PRODUCTIONS</span>
-              <span class="sat-cat">Media &middot; Entertainment</span>
+              <span class="sat-name">ANTELLAY</span>
+              <span class="sat-cat">AI &middot; Technology</span>
             </div>
           </div>
 
@@ -1840,50 +1906,6 @@ body {
         <div class="stat-label">Connected Ecosystem</div>
       </div>
     </div>
-
-    <!-- ==================== 4. A CONNECTED ECOSYSTEM ==================== -->
-    <section class="section-row" data-reveal>
-      <div class="section-sidebar">
-        <h2>A Connected<br>Ecosystem</h2>
-        <p>Technology &bull; Capital &bull; Talent &bull; Media &bull; Infrastructure &bull; Opportunity &mdash; all connected inside one ecosystem.</p>
-      </div>
-
-      <div class="network-banner">
-        <div class="network-grid">
-
-          <div class="net-row">
-            <div class="net-node"><i class="fa-solid fa-microchip"></i> ANTELLAY</div>
-            <div class="net-node"><i class="fa-solid fa-network-wired"></i> CELEBSOX</div>
-            <div class="net-node"><i class="fa-solid fa-xmark"></i> NXTFUND</div>
-            <div class="net-node"><i class="fa-solid fa-satellite"></i> ANTELLAY SPACE</div>
-          </div>
-
-          <div class="net-row">
-            <div class="net-node"><i class="fa-solid fa-brain"></i> NUMEREXX</div>
-
-            <div class="net-center-hub">
-              <span class="hub-title">CELEBSO</span>
-              <span class="hub-sub">GROUP</span>
-            </div>
-
-            <div class="net-node"><i class="fa-solid fa-video"></i> CELEBSO PRODUCTIONS</div>
-          </div>
-
-          <div class="net-row">
-            <div class="net-node"><i class="fa-solid fa-graduation-cap"></i> CELEBSO SCHOOL</div>
-          </div>
-
-          <div class="net-row">
-            <div class="net-node"><i class="fa-solid fa-droplet"></i> BYIZON.AI</div>
-            <div class="net-node"><i class="fa-solid fa-atom"></i> GREHNI.AI</div>
-            <div class="net-node"><i class="fa-solid fa-building"></i> STARTUP VALLEY</div>
-            <div class="net-node"><i class="fa-solid fa-shield-halved"></i> SPACERENTIYA</div>
-            <div class="net-node"><i class="fa-solid fa-mountain"></i> VEIRAKAS</div>
-          </div>
-
-        </div>
-      </div>
-    </section>
 
     <!-- ==================== 5. ONE ECOSYSTEM. MULTIPLE POSSIBILITIES ==================== -->
     <section class="section-row" data-reveal>
@@ -2036,7 +2058,7 @@ body {
             </div>
           </div>
           <p class="wider-desc">A venture focused on intelligence, data and emerging digital possibilities.</p>
-          <a href="#" class="wider-action">Explore &rarr;</a>
+          <a href="https://numerixx.com/" target="_blank" rel="noopener" class="wider-action">Explore &rarr;</a>
         </div>
 
         <div class="wider-card" data-filter="EDUCATION">
@@ -2048,7 +2070,7 @@ body {
             </div>
           </div>
           <p class="wider-desc">Building learning and development opportunities for the next generation of talent.</p>
-          <a href="#" class="wider-action">Explore &rarr;</a>
+          <a href="https://school.celebso.com/" target="_blank" rel="noopener" class="wider-action">Explore &rarr;</a>
         </div>
 
         <div class="wider-card" data-filter="AI &amp; TECHNOLOGY DIGITAL">
@@ -2060,7 +2082,7 @@ body {
             </div>
           </div>
           <p class="wider-desc">Exploring AI-powered digital products and future-facing technology.</p>
-          <a href="#" class="wider-action">Explore &rarr;</a>
+          <a href="https://byizon.in/" target="_blank" rel="noopener" class="wider-action">Explore &rarr;</a>
         </div>
 
         <div class="wider-card" data-filter="AI &amp; TECHNOLOGY DIGITAL">
@@ -2072,7 +2094,7 @@ body {
             </div>
           </div>
           <p class="wider-desc">Building technology-driven solutions for emerging digital opportunities.</p>
-          <a href="#" class="wider-action">Explore &rarr;</a>
+          <a href="https://grehni.antellay.in/#home" target="_blank" rel="noopener" class="wider-action">Explore &rarr;</a>
         </div>
 
         <div class="wider-card" data-filter="STARTUPS">
@@ -2084,7 +2106,7 @@ body {
             </div>
           </div>
           <p class="wider-desc">A platform and environment designed to support founders, startups and entrepreneurial communities.</p>
-          <a href="#" class="wider-action">Explore &rarr;</a>
+          <a href="https://valley.celebso.com/" target="_blank" rel="noopener" class="wider-action">Explore &rarr;</a>
         </div>
 
         <div class="wider-card" data-filter="REAL ESTATE">
@@ -2108,7 +2130,7 @@ body {
             </div>
           </div>
           <p class="wider-desc">Building opportunities around travel, experiences and connected communities.</p>
-          <a href="#" class="wider-action">Explore &rarr;</a>
+          <a href="https://veirakas.life/" target="_blank" rel="noopener" class="wider-action">Explore &rarr;</a>
         </div>
 
 <div class="wider-card" data-filter="MEDIA">
@@ -2120,7 +2142,7 @@ body {
             </div>
           </div>
           <p class="wider-desc">Creating media, production and visibility opportunities across the Celebso ecosystem.</p>
-          <a href="#" class="wider-action">Explore &rarr;</a>
+          <a href="https://productions.celebso.com/" target="_blank" rel="noopener" class="wider-action">Explore &rarr;</a>
         </div>
 
         <div class="wider-card" data-filter="AI &amp; TECHNOLOGY">
@@ -2132,7 +2154,7 @@ body {
             </div>
           </div>
           <p class="wider-desc">Building technology and intelligence solutions for the next generation of digital and physical infrastructure.</p>
-          <a href="#" class="wider-action">Explore &rarr;</a>
+          <a href="https://antellay.in/" target="_blank" rel="noopener" class="wider-action">Explore &rarr;</a>
         </div>
 
         <div class="wider-card" data-filter="CAPITAL">
@@ -2144,7 +2166,7 @@ body {
             </div>
           </div>
           <p class="wider-desc">Building a venture ecosystem connecting capital, founders, businesses and high-potential opportunities.</p>
-          <a href="#" class="wider-action">Explore &rarr;</a>
+          <a href="https://nxtfund.in/" target="_blank" rel="noopener" class="wider-action">Explore &rarr;</a>
         </div>
 
         <div class="wider-card" data-filter="SPACE">
@@ -2156,7 +2178,7 @@ body {
             </div>
           </div>
           <p class="wider-desc">Building AI-native intelligence and technology for the emerging space economy.</p>
-          <a href="#" class="wider-action">Explore &rarr;</a>
+          <a href="https://x.antellay.in/" target="_blank" rel="noopener" class="wider-action">Explore &rarr;</a>
         </div>
 
       </div>
@@ -2272,25 +2294,25 @@ body {
   <footer class="nxt-footer-section">
     <div class="nxt-footer-content">
       <div class="nxt-logo-pill">
-        <img src="images/ChatGPT Image Aug 18, 2026, 10_51_46 PM.png" alt="Celebso Group" style="height: 28px; width: auto; object-fit: contain;">
+        <img src="/images/ChatGPT Image Aug 18, 2026, 10_51_46 PM.png" alt="Celebso Group" style="height: 28px; width: auto; object-fit: contain;">
       </div>
 
       <div class="nxt-tagline">Building the Future Through Technology, Intelligence &amp; Innovation</div>
 
       <div class="footer-links-row">
-        <a href="about.html">About Us</a>
+        <a href="/about">About Us</a>
         <span class="sep">&bull;</span>
-        <a href="leadership.html">Leadership</a>
+        <a href="/leadership">Leadership</a>
         <span class="sep">&bull;</span>
-        <a href="VENTURES.html">Ventures</a>
+        <a href="/VENTURES">Ventures</a>
         <span class="sep">&bull;</span>
-        <a href="patner.html">Partners</a>
+        <a href="/patner">Partners</a>
         <span class="sep">&bull;</span>
-        <a href="news.html">News</a>
+        <a href="/news">News</a>
         <span class="sep">&bull;</span>
-        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a href="/terms-and-conditions">Terms &amp; Conditions</a>
         <span class="sep">&bull;</span>
-        <a href="contact.html">Contact Us</a>
+        <a href="/contact">Contact Us</a>
       </div>
 
       <div class="footer-email">
@@ -2303,7 +2325,7 @@ body {
         <a href="https://x.com/Celebso_" target="_blank" rel="noopener" class="social-btn"><svg viewBox="0 0 512 512" width="12" height="12" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
       </div>
 
-      <div class="copyright-text">&copy; 2026 ANTELLAY Tech. All Rights Reserved. A Celebso Group Company.</div>
+      <div class="copyright-text">&copy; 2026 <a href="https://antellay.in/" target="_blank" rel="noopener">ANTELLAY Lab</a>. All Rights Reserved. A Celebso Group Company.</div>
     </div>
   </footer>
 
