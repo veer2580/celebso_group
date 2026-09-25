@@ -38,6 +38,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
+    :root {
+      --fs-body: clamp(13px, 0.2vw + 12px, 14px);
+      --fs-micro: clamp(9.5px, 0.15vw + 9px, 10.5px);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -231,7 +236,7 @@
       max-width: 760px;
       margin: 0 auto;
       color: #64748b;
-      font-size: 17px;
+      font-size: var(--fs-body);
     }
 
     .dot {
@@ -382,7 +387,7 @@
 
     .terms-section p {
       color: #475569;
-      font-size: 15.5px;
+      font-size: var(--fs-body);
       margin-bottom: 12px;
     }
 
@@ -689,7 +694,7 @@
       }
 
       .terms-hero p {
-        font-size: 14px;
+        font-size: var(--fs-body);
       }
 
       .terms-meta {

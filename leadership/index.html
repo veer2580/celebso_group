@@ -42,6 +42,11 @@
 
   <style>
     /* ================= GLOBAL RESETS ================= */
+    :root {
+      --fs-body: clamp(13px, 0.2vw + 12px, 14px);
+      --fs-micro: clamp(9.5px, 0.15vw + 9px, 10.5px);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -266,7 +271,7 @@ body {
     }
 
     .hero-desc {
-      font-size: 11px;
+      font-size: var(--fs-body);
       color: #94a3b8;
       line-height: 1.65;
     }
@@ -312,7 +317,7 @@ body {
     }
 
     .founder-text {
-      font-size: 11px;
+      font-size: var(--fs-body);
       color: #475569;
       line-height: 1.7;
       margin-bottom: 14px;
@@ -362,9 +367,9 @@ body {
     }
 
     .people-header p {
-      font-size: 13px;
+      font-size: clamp(15px, 0.3vw + 14px, 16px);
       color: #64748b;
-      line-height: 1.6;
+      line-height: 1.7;
       font-weight: 500;
     }
 
@@ -380,15 +385,17 @@ body {
       border-radius: 12px;
       padding: 24px 18px;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 16px;
+      text-align: center;
+      gap: 14px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.03);
     }
 
     .team-avatar {
-      width: 70px;
-      height: 70px;
-      border-radius: 10px;
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
       overflow: hidden;
       flex-shrink: 0;
       background-color: #f1f5f9;
@@ -401,57 +408,64 @@ body {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center top;
+      display: block;
     }
 
     .avatar-placeholder {
-      width: 70px;
-      height: 70px;
+      width: 76px;
+      height: 76px;
       border-radius: 50%;
       border: 1px solid #cbd5e1;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #94a3b8;
-      font-size: 26px;
+      font-size: 28px;
       background: #ffffff;
+      flex-shrink: 0;
     }
 
     .team-info {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      text-align: center;
       overflow: hidden;
+      width: 100%;
     }
 
     .team-name {
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 800;
       color: #0f172a;
       line-height: 1.3;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
 
     .team-role {
-      font-size: 10px;
+      font-size: 11.5px;
       color: #64748b;
       font-weight: 600;
-      line-height: 1.3;
+      line-height: 1.4;
     }
 
     .team-company {
-      font-size: 10px;
+      font-size: 11.5px;
       color: #64748b;
       margin-bottom: 8px;
-      line-height: 1.3;
+      line-height: 1.4;
     }
 
     .team-socials {
       display: flex;
       gap: 10px;
       align-items: center;
+      justify-content: center;
     }
 
     .team-socials a {
-      font-size: 11px;
+      font-size: 12.5px;
       font-weight: 700;
       color: #0f172a;
       transition: color 0.2s;
@@ -479,7 +493,7 @@ body {
     }
 
     .sidebar-desc {
-      font-size: 10.5px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.6;
     }
@@ -514,7 +528,7 @@ body {
     }
 
     .vision-card-desc {
-      font-size: 9.5px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.55;
     }
@@ -567,7 +581,7 @@ body {
     }
 
     .how-desc {
-      font-size: 10.5px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.5;
     }
@@ -623,7 +637,7 @@ body {
     }
 
     .diagram-center span:last-child {
-      font-size: 6.5px;
+      font-size: var(--fs-micro);
       font-weight: 600;
       color: #64748b;
       letter-spacing: 1.2px;
@@ -660,7 +674,7 @@ body {
     }
 
     .node-label {
-      font-size: 8.5px;
+      font-size: var(--fs-micro);
       font-weight: 800;
       color: #0f172a;
       letter-spacing: 0.5px;
@@ -683,7 +697,7 @@ body {
     }
 
     .diagram-text-side p {
-      font-size: 11px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.6;
       font-weight: 600;
@@ -784,6 +798,20 @@ body {
       flex-direction: column;
     }
 
+    a.wider-card {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    a.wider-card:hover,
+    a.wider-card:focus-visible {
+      border-color: #ff5023;
+      box-shadow: 0 6px 20px rgba(255, 80, 35, 0.16);
+      transform: translateY(-2px);
+    }
+
     .wider-header {
       display: flex;
       align-items: center;
@@ -792,26 +820,29 @@ body {
     }
 
     .wider-icon {
-      font-size: 11px;
+      font-size: 13px;
       color: #0f172a;
     }
 
     .wider-title {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 800;
       color: #0f172a;
       letter-spacing: 0.3px;
+      line-height: 1.3;
     }
 
     .wider-sub {
-      font-size: 9.5px;
+      font-size: 11.5px;
       color: #64748b;
+      line-height: 1.5;
       margin-bottom: 14px;
     }
 
     .wider-meta {
-      font-size: 9.5px;
+      font-size: 11px;
       color: #64748b;
+      line-height: 1.5;
       margin-top: auto;
     }
 
@@ -863,7 +894,7 @@ body {
     }
 
     .ambition-desc {
-      font-size: 11px;
+      font-size: var(--fs-body);
       color: #94a3b8;
       line-height: 1.65;
     }
@@ -887,7 +918,7 @@ body {
     }
 
     .roadmap-header p {
-      font-size: 11px;
+      font-size: var(--fs-body);
       color: #0f172a;
       font-weight: 700;
       line-height: 1.4;
@@ -960,7 +991,7 @@ body {
     }
 
     .node-desc {
-      font-size: 9.5px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.5;
     }
@@ -1009,7 +1040,7 @@ body {
     }
 
     .cta-desc {
-      font-size: 10.5px;
+      font-size: var(--fs-body);
       color: #94a3b8;
       line-height: 1.55;
     }
@@ -1239,7 +1270,7 @@ body {
         border-radius: 20px;
       }
       nav a:not(.btn-funding) {
-        font-size: 9px;
+        font-size: var(--fs-micro);
         padding: 5px 7px;
       }
       .btn-funding {
@@ -1849,7 +1880,7 @@ body {
             <div class="flag-header"><i class="fa-solid fa-play" style="font-size:7px; transform: rotate(-90deg);"></i> ANTELLAY</div>
             <div class="flag-sub">AI · Technology · Engineering</div>
             <div class="flag-meta">Leadership Team:<br><span>Executive Leadership</span></div>
-            <a href="#" class="flag-link">Explore &rarr;</a>
+            <a href="https://antellay.in/" target="_blank" rel="noopener" class="flag-link">Explore &rarr;</a>
           </div>
         </div>
 
@@ -1860,7 +1891,7 @@ body {
             <div class="flag-header"><i class="fa-solid fa-circle-nodes" style="font-size:8px;"></i> CELEBSOX</div>
             <div class="flag-sub">Technology · Network · Community</div>
             <div class="flag-meta">Leadership Team:<br><span>Executive Leadership</span></div>
-            <a href="#" class="flag-link">Explore &rarr;</a>
+            <a href="https://app.celebso.com/" target="_blank" rel="noopener" class="flag-link">Explore &rarr;</a>
           </div>
         </div>
 
@@ -1871,7 +1902,7 @@ body {
             <div class="flag-header"><i class="fa-solid fa-xmark" style="font-size:8px;"></i> NXTFUND</div>
             <div class="flag-sub">Capital · Venture · Growth</div>
             <div class="flag-meta">Leadership Team:<br><span>Investment Leadership</span></div>
-            <a href="#" class="flag-link">Explore &rarr;</a>
+            <a href="https://www.nxtfund.in/" target="_blank" rel="noopener" class="flag-link">Explore &rarr;</a>
           </div>
         </div>
 
@@ -1882,7 +1913,7 @@ body {
             <div class="flag-header"><i class="fa-solid fa-satellite" style="font-size:8px;"></i> ANTELLAY SPACE</div>
             <div class="flag-sub">Space Technology · Intelligence</div>
             <div class="flag-meta">Leadership Team:<br><span>Mission Leadership</span></div>
-            <a href="#" class="flag-link">Explore &rarr;</a>
+            <a href="https://antellay.space/" target="_blank" rel="noopener" class="flag-link">Explore &rarr;</a>
           </div>
         </div>
 
@@ -1892,84 +1923,104 @@ body {
       <div class="wider-grid" data-reveal="zoom">
 
         <!-- 1 -->
-        <div class="wider-card">
+        <a class="wider-card" href="https://numerixx.com/" target="_blank" rel="noopener">
           <div class="wider-header">
             <i class="fa-solid fa-brain wider-icon"></i>
-            <span class="wider-title">NUMEREXX</span>
+            <span class="wider-title">NUMERIXX</span>
           </div>
           <div class="wider-sub">Intelligence · Data</div>
           <div class="wider-meta">Leadership Team:<br><span>Academic Leadership</span></div>
-        </div>
+        </a>
 
         <!-- 2 -->
-        <div class="wider-card">
+        <a class="wider-card" href="https://school.celebso.com/" target="_blank" rel="noopener">
           <div class="wider-header">
             <i class="fa-solid fa-graduation-cap wider-icon"></i>
             <span class="wider-title">CELEBSO SCHOOL</span>
           </div>
           <div class="wider-sub">Education · Talent</div>
           <div class="wider-meta">Leadership Team:<br><span>Academic Leadership</span></div>
-        </div>
+        </a>
 
         <!-- 3 -->
-        <div class="wider-card">
+        <a class="wider-card" href="https://byizon.in/" target="_blank" rel="noopener">
           <div class="wider-header">
             <i class="fa-solid fa-droplet wider-icon"></i>
             <span class="wider-title">BYIZON.AI</span>
           </div>
           <div class="wider-sub">AI · Digital Innovation</div>
           <div class="wider-meta">Leadership Team:<br><span>Product Leadership</span></div>
-        </div>
+        </a>
 
         <!-- 4 -->
-        <div class="wider-card">
+        <a class="wider-card" href="https://grehni.antellay.in/" target="_blank" rel="noopener">
           <div class="wider-header">
             <i class="fa-solid fa-atom wider-icon"></i>
             <span class="wider-title">GREHNI.AI</span>
           </div>
           <div class="wider-sub">AI · Digital Innovation</div>
           <div class="wider-meta">Leadership Team:<br><span>Product Leadership</span></div>
-        </div>
+        </a>
 
         <!-- 5 -->
-        <div class="wider-card">
+        <a class="wider-card" href="https://startupvalley.in/" target="_blank" rel="noopener">
           <div class="wider-header">
             <i class="fa-solid fa-building wider-icon"></i>
             <span class="wider-title">STARTUP VALLEY</span>
           </div>
           <div class="wider-sub">Entrepreneurship · Workspace</div>
           <div class="wider-meta">Leadership Team:<br><span>Operations Leadership</span></div>
-        </div>
+        </a>
 
         <!-- 6 -->
-        <div class="wider-card">
+        <a class="wider-card" href="https://spacerentiya.in/" target="_blank" rel="noopener">
           <div class="wider-header">
             <i class="fa-solid fa-shield-halved wider-icon"></i>
             <span class="wider-title">SPACERENTIYA</span>
           </div>
           <div class="wider-sub">Real Estate · Infrastructure</div>
           <div class="wider-meta">Leadership Team:<br><span>Operations Leadership</span></div>
-        </div>
+        </a>
 
         <!-- 7 -->
-        <div class="wider-card">
+        <a class="wider-card" href="https://veirakhas.world/" target="_blank" rel="noopener">
           <div class="wider-header">
             <i class="fa-solid fa-mountain wider-icon"></i>
-            <span class="wider-title">VEIRAKAS</span>
+            <span class="wider-title">VEIRAKHAS</span>
           </div>
           <div class="wider-sub">Travel · Experiences</div>
           <div class="wider-meta">Leadership Team:<br><span>Operations Leadership</span></div>
-        </div>
+        </a>
 
         <!-- 8 -->
-        <div class="wider-card">
+        <a class="wider-card" href="https://productions.celebso.com/" target="_blank" rel="noopener">
           <div class="wider-header">
             <i class="fa-solid fa-clapperboard wider-icon"></i>
             <span class="wider-title">CELEBSO PRODUCTIONS</span>
           </div>
           <div class="wider-sub">Media · Entertainment</div>
           <div class="wider-meta">Leadership Team:<br><span>Creative Leadership</span></div>
-        </div>
+        </a>
+
+        <!-- 9 -->
+        <a class="wider-card" href="https://os.antellay.in/" target="_blank" rel="noopener">
+          <div class="wider-header">
+            <i class="fa-solid fa-sitemap wider-icon"></i>
+            <span class="wider-title">ANTELLAY OS</span>
+          </div>
+          <div class="wider-sub">Business · Operations · Intelligence</div>
+          <div class="wider-meta">Leadership Team:<br><span>Operations Leadership</span></div>
+        </a>
+
+        <!-- 10 -->
+        <a class="wider-card" href="https://whnxt.world/" target="_blank" rel="noopener">
+          <div class="wider-header">
+            <i class="fa-solid fa-rocket wider-icon"></i>
+            <span class="wider-title">WHNXT</span>
+          </div>
+          <div class="wider-sub">Community · Innovation · Future</div>
+          <div class="wider-meta">Leadership Team:<br><span>Operations Leadership</span></div>
+        </a>
 
       </div>
     </section>

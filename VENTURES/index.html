@@ -42,6 +42,11 @@
 
   <style>
     /* ================= GLOBAL RESETS ================= */
+    :root {
+      --fs-body: clamp(13px, 0.2vw + 12px, 14px);
+      --fs-micro: clamp(9.5px, 0.15vw + 9px, 10.5px);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -253,7 +258,7 @@ body {
     }
 
     .hero-text {
-      font-size: 16px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.65;
       margin-bottom: 30px;
@@ -560,7 +565,7 @@ body {
     }
 
     .sidebar-info p {
-      font-size: 14px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.6;
     }
@@ -585,7 +590,7 @@ body {
     }
 
     .section-sidebar p {
-      font-size: 14px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.6;
     }
@@ -651,7 +656,7 @@ body {
     }
 
     .net-center-hub .hub-sub {
-      font-size: 8.5px;
+      font-size: var(--fs-micro);
       font-weight: 600;
       color: #94a3b8;
       letter-spacing: 1.5px;
@@ -719,7 +724,7 @@ body {
     }
 
     .flow-desc {
-      font-size: 12px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.45;
     }
@@ -809,7 +814,7 @@ body {
     }
 
     .card-desc {
-      font-size: 12.5px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.5;
       margin-bottom: 16px;
@@ -885,7 +890,7 @@ body {
     }
 
     .wider-desc {
-      font-size: 12px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.5;
       margin-bottom: 14px;
@@ -996,7 +1001,7 @@ body {
     }
 
     .next-desc {
-      font-size: 12px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.45;
     }
@@ -1042,7 +1047,7 @@ body {
     }
 
     .cta-left p {
-      font-size: 13.5px;
+      font-size: var(--fs-body);
       color: #94a3b8;
     }
 
@@ -1153,7 +1158,7 @@ body {
         border-radius: 20px;
       }
       nav a:not(.btn-funding) {
-        font-size: 9px;
+        font-size: var(--fs-micro);
         padding: 5px 7px;
       }
       .btn-funding {
@@ -1181,7 +1186,7 @@ body {
         font-size: 30px;
       }
       .hero-text {
-        font-size: 14px;
+        font-size: var(--fs-body);
       }
       .hero-right {
         height: 300px;
@@ -1194,7 +1199,7 @@ body {
         font-size: 12px;
       }
       .hub-center .hub-sub {
-        font-size: 8px;
+        font-size: var(--fs-micro);
       }
       .satellite {
         padding: 4px 10px;
@@ -1206,10 +1211,10 @@ body {
         font-size: 10px;
       }
       .sat-name {
-        font-size: 8px;
+        font-size: var(--fs-micro);
       }
       .sat-cat {
-        font-size: 6.5px;
+        font-size: var(--fs-micro);
       }
       .stats-card {
         gap: 14px;
@@ -1226,7 +1231,7 @@ body {
         font-size: 11.5px;
       }
       .flow-desc {
-        font-size: 10.5px;
+        font-size: var(--fs-body);
       }
       .flow-icon {
         width: 30px;
@@ -1253,7 +1258,7 @@ body {
       }
       .net-node {
         padding: 3px 8px;
-        font-size: 8.5px;
+        font-size: var(--fs-micro);
       }
     }
   /* ===== FOOTER ===== */
@@ -2053,7 +2058,7 @@ body {
           <div class="wider-header">
             <div class="wider-icon"><i class="fa-solid fa-brain"></i></div>
             <div>
-              <div class="wider-title">NUMEREXX</div>
+                <div class="wider-title">NUMERIXX</div>
               <div class="wider-sub">Intelligence &middot; Data</div>
             </div>
           </div>
@@ -2125,7 +2130,7 @@ body {
           <div class="wider-header">
             <div class="wider-icon"><i class="fa-solid fa-mountain"></i></div>
             <div>
-              <div class="wider-title">VEIRAKAS</div>
+              <div class="wider-title">VEIRAKHAS</div>
               <div class="wider-sub">Travel &middot; Experiences</div>
             </div>
           </div>

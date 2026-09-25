@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -64,6 +64,11 @@
 
   <style>
     /* ===== GLOBAL RESET & BASE ===== */
+    :root {
+      --fs-body: clamp(13px, 0.2vw + 12px, 14px);
+      --fs-micro: clamp(9.5px, 0.15vw + 9px, 10.5px);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -288,7 +293,7 @@ body {
     }
 
     .hero h1 {
-      font-size: 42px;
+      font-size: 38px;
       line-height: 1.12;
       font-weight: 800;
       color: #0f172a;
@@ -301,7 +306,7 @@ body {
     }
 
     .hero p {
-      font-size: 13px;
+      font-size: var(--fs-body);
       color: #475569;
       margin-bottom: 34px;
       line-height: 1.7;
@@ -410,14 +415,15 @@ body {
     /* ===== ABOUT SECTION ===== */
     .about-section {
       padding: 50px 20px 30px;
-      text-align: left;
+      text-align: center;
     }
 
     .about-section p {
-      font-size: 13.5px;
+      font-size: clamp(15px, 0.3vw + 14px, 16px);
       color: #334155;
-      margin-bottom: 16px;
-      line-height: 1.6;
+      margin: 0 auto 16px;
+      max-width: 860px;
+      line-height: 1.8;
       font-weight: 500;
     }
 
@@ -431,17 +437,18 @@ body {
     }
 
     .stat-item h2 {
-      font-size: 26px;
+      font-size: 30px;
       font-weight: 800;
       color: #0f172a;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .stat-item p {
-      font-size: 11px;
+      font-size: var(--fs-body);
       color: #64748b;
       font-weight: 600;
-      line-height: 1.2;
+      line-height: 1.4;
+      margin: 0 auto;
     }
 
     /* ===== VISION & MISSION ===== */
@@ -458,8 +465,10 @@ body {
     }
 
     .founder-image-container {
+      position: relative;
       width: 100%;
       height: 320px;
+      aspect-ratio: 1 / 1;
       border-radius: 16px;
       overflow: hidden;
       background-color: #cbd5e1;
@@ -468,9 +477,13 @@ body {
     }
 
     .founder-image-container img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center top;
+      display: block;
     }
 
     .founder-caption {
@@ -498,10 +511,10 @@ body {
     }
 
     .vision-content li {
-      font-size: 15.5px;
+      font-size: clamp(15px, 0.3vw + 14px, 16px);
       color: #475569;
-      margin-bottom: 18px;
-      line-height: 1.7;
+      margin-bottom: 16px;
+      line-height: 1.8;
     }
 
     /* ===== BIG BRANDING FOOTER (from file 1) ===== */
@@ -577,7 +590,18 @@ body {
       padding: 3px 10px;
       border-radius: 999px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
     }
+
+    a.node-label:hover,
+    a.node-label:focus-visible {
+      background: #ff5023;
+      color: #ffffff;
+      box-shadow: 0 4px 16px rgba(255, 80, 35, 0.4);
+    }
+
 
     .eco-antellay-top { top: 13%; left: 45%; }
     .eco-antellay-top .node-dot { background-color: #000; }
@@ -688,22 +712,28 @@ body {
       display: grid;
       grid-template-columns: 1fr 1.3fr 0.7fr;
       gap: 20px;
-      align-items: center;
+      align-items: stretch;
       margin-bottom: 30px;
     }
 
     .building-img-card {
+      position: relative;
       width: 100%;
-      height: 250px;
+      height: 100%;
+      min-height: 250px;
       border-radius: 14px;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     }
 
     .building-img-card img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
+      display: block;
     }
 
     .nxtfund-info {
@@ -712,7 +742,7 @@ body {
 
     .nxtfund-tag {
       color: #ff3b30;
-      font-size: 9px;
+      font-size: 11px;
       font-weight: 800;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -721,14 +751,19 @@ body {
 
     .nxtfund-info ul {
       list-style-type: disc;
-      padding-left: 14px;
+      padding-left: 16px;
+      margin: 0;
     }
 
     .nxtfund-info li {
-      font-size: 10.5px;
+      font-size: var(--fs-body);
       color: #334155;
-      margin-bottom: 8px;
-      line-height: 1.5;
+      margin-bottom: 10px;
+      line-height: 1.75;
+    }
+
+    .nxtfund-info li::marker {
+      color: #ff3b30;
     }
 
     .incubation-card {
@@ -737,6 +772,10 @@ body {
       border-radius: 12px;
       padding: 25px 15px;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       box-shadow: 0 4px 20px rgba(0,0,0,0.03);
     }
 
@@ -753,10 +792,11 @@ body {
     }
 
     .incubation-card h4 {
-      font-size: 11px;
+      font-size: 15px;
       font-weight: 800;
       color: #0f172a;
       margin-bottom: 8px;
+      line-height: 1.3;
     }
 
     .incubation-card .divider {
@@ -767,9 +807,9 @@ body {
     }
 
     .incubation-card p {
-      font-size: 9.5px;
+      font-size: var(--fs-body);
       color: #64748b;
-      line-height: 1.3;
+      line-height: 1.5;
     }
 
     /* ===== CTA BANNER ===== */
@@ -834,7 +874,7 @@ body {
     }
 
     .cta-text p {
-      font-size: 11px;
+      font-size: var(--fs-body);
       color: #e2e8f0;
       font-weight: 600;
       margin-bottom: 8px;
@@ -915,7 +955,7 @@ body {
       gap: 5px;
       background-color: rgba(255, 77, 41, 0.15);
       color: #ff5232;
-      font-size: 8px;
+      font-size: var(--fs-micro);
       font-weight: 800;
       letter-spacing: 0.8px;
       padding: 3px 8px;
@@ -939,7 +979,7 @@ body {
     }
 
     .meetup-content p {
-      font-size: 10.5px;
+      font-size: var(--fs-body);
       color: #94a3b8;
       margin-bottom: 16px;
     }
@@ -980,38 +1020,45 @@ body {
 
     /* ===== CATEGORIES ROW (file 3) ===== */
     .categories-section {
-      padding: 30px 0;
+      padding: 40px 0;
       background-color: #f8fafc;
     }
 
     .categories-row {
       display: grid;
       grid-template-columns: repeat(10, 1fr);
-      gap: 8px;
+      gap: 12px;
       margin-bottom: 50px;
     }
 
     .category-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
-      border-radius: 8px;
-      padding: 12px 6px;
+      border-radius: 12px;
+      padding: 18px 10px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 80, 35, 0.35);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
     }
 
     .category-icon {
-      width: 28px;
-      height: 28px;
-      margin-bottom: 8px;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #334155;
+      color: #ff5023;
     }
 
     .category-icon svg {
@@ -1020,19 +1067,19 @@ body {
     }
 
     .category-title {
-      font-size: 8px;
+      font-size: 10px;
       font-weight: 800;
       color: #0f172a;
       text-transform: uppercase;
-      letter-spacing: 0.3px;
-      margin-bottom: 4px;
-      line-height: 1.1;
+      letter-spacing: 0.4px;
+      margin-bottom: 6px;
+      line-height: 1.25;
     }
 
     .category-desc {
-      font-size: 7px;
+      font-size: var(--fs-micro);
       color: #64748b;
-      line-height: 1.2;
+      line-height: 1.45;
       font-weight: 500;
     }
 
@@ -1085,17 +1132,16 @@ body {
     .featured-title-wrap {
       position: relative;
       display: inline-block;
+      padding: 7px 20px;
     }
 
     .featured-title-wrap::before {
       content: '';
       position: absolute;
-      left: -10px;
-      top: -4px;
-      width: 140px;
-      height: 38px;
-      background: rgba(255, 255, 255, 0.8);
+      inset: 0;
+      background: rgba(255, 255, 255, 0.9);
       border-radius: 30px;
+      box-shadow: 0 2px 12px rgba(15, 23, 42, 0.07);
       z-index: 1;
     }
 
@@ -1103,15 +1149,17 @@ body {
       font-size: 20px;
       font-weight: 800;
       color: #0f172a;
+      letter-spacing: -0.2px;
       position: relative;
       z-index: 2;
     }
 
     .view-all-link {
-      font-size: 10px;
+      font-size: 11.5px;
       font-weight: 800;
       color: #1e293b;
       text-decoration: underline;
+      text-underline-offset: 3px;
       cursor: pointer;
       transition: color 0.2s ease;
     }
@@ -1163,24 +1211,27 @@ body {
     }
 
     .main-card-desc {
-      font-size: 10.5px;
+      font-size: var(--fs-body);
       color: #64748b;
-      line-height: 1.5;
-      margin-bottom: 16px;
+      line-height: 1.6;
+      margin-bottom: 14px;
     }
 
     .tags {
       display: flex;
       gap: 8px;
+      flex-wrap: wrap;
     }
 
     .tag {
-      background: #f1f5f9;
-      color: #475569;
-      font-size: 8px;
+      background: #fff1ec;
+      color: #c2410c;
+      font-size: 9.5px;
       font-weight: 700;
-      padding: 4px 8px;
-      border-radius: 4px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 20px;
     }
 
     .btn-site {
@@ -1237,16 +1288,27 @@ body {
     }
 
     .side-card-content h3 {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 800;
       color: #0f172a;
+      letter-spacing: 1.5px;
       margin-bottom: 6px;
     }
 
-    .side-card-content p {
-      font-size: 10px;
+    .card-eyebrow {
+      font-size: 9.5px;
+      font-weight: 800;
+      color: #ea580c;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .side-card-content p:not(.card-eyebrow) {
+      font-size: clamp(12px, 0.15vw + 11px, 13px);
       color: #64748b;
-      line-height: 1.4;
+      line-height: 1.6;
+      margin-bottom: 4px;
     }
 
     /* ===== SPACE BANNER ===== */
@@ -1312,7 +1374,7 @@ body {
     }
 
     .launch-badge .label {
-      font-size: 9px;
+      font-size: var(--fs-micro);
       font-weight: 800;
       color: #ff5232;
       letter-spacing: 1px;
@@ -1418,7 +1480,7 @@ body {
     }
 
     .node-desc {
-      font-size: 7.5px;
+      font-size: var(--fs-micro);
       font-weight: 700;
       color: #64748b;
       letter-spacing: 0.3px;
@@ -1459,7 +1521,7 @@ body {
     .india-pill {
       background: #000000;
       color: #ffffff;
-      font-size: 9px;
+      font-size: var(--fs-micro);
       font-weight: 800;
       padding: 3px 10px;
       border-radius: 4px;
@@ -1468,7 +1530,7 @@ body {
     }
 
     .india-subtext {
-      font-size: 8px;
+      font-size: var(--fs-micro);
       color: #64748b;
       font-weight: 600;
       margin-top: 2px;
@@ -1526,7 +1588,7 @@ body {
     }
 
     .cyber-sub {
-      font-size: 9px;
+      font-size: var(--fs-micro);
       font-weight: 700;
       letter-spacing: 5px;
       color: #94a3b8;
@@ -1691,7 +1753,7 @@ body {
     }
 
     .school-subtext {
-      font-size: 9px;
+      font-size: var(--fs-micro);
       font-weight: 600;
       color: #94a3b8;
     }
@@ -1744,7 +1806,7 @@ body {
     }
 
     .roi-badge .label {
-      font-size: 8px;
+      font-size: var(--fs-micro);
       font-weight: 800;
       color: #64748b;
       letter-spacing: 0.5px;
@@ -1757,7 +1819,7 @@ body {
     }
 
     .tag-success {
-      font-size: 9px;
+      font-size: var(--fs-micro);
       font-weight: 800;
       color: #ff4d29;
       letter-spacing: 1.5px;
@@ -1775,10 +1837,10 @@ body {
     }
 
     .testimonial-quote {
-      font-size: 13px;
+      font-size: var(--fs-body);
       font-style: italic;
       color: #334155;
-      line-height: 1.65;
+      line-height: 1.75;
       margin-bottom: 24px;
       font-weight: 500;
     }
@@ -1810,7 +1872,7 @@ body {
     }
 
     .author-info p {
-      font-size: 9.5px;
+      font-size: 10.5px;
       color: #64748b;
       font-weight: 600;
     }
@@ -2005,7 +2067,7 @@ body {
     }
 
     .news-date {
-      font-size: 9px;
+      font-size: var(--fs-micro);
       color: #94a3b8;
       font-weight: 700;
       letter-spacing: 0.5px;
@@ -2343,6 +2405,9 @@ body {
       .nxtfund-grid {
         grid-template-columns: 1fr;
       }
+      .building-img-card {
+        height: 220px;
+      }
       .cta-banner-wrapper {
         grid-template-columns: 1fr;
       }
@@ -2422,12 +2487,12 @@ body {
         padding-right: 20px;
       }
       .hero h1 {
-        font-size: 32px;
+        font-size: 30px;
         line-height: 1.1;
       }
       .hero p {
         max-width: 100%;
-        font-size: 14px;
+        font-size: var(--fs-body);
         color: #334155;
       }
       .hero-buttons {
@@ -2476,7 +2541,10 @@ body {
         gap: 14px;
       }
       .stat-item h2 {
-        font-size: 24px;
+        font-size: 26px;
+      }
+      .stat-item p {
+        font-size: var(--fs-body);
       }
 
       /* ---- Vision & Mission ---- */
@@ -2502,7 +2570,7 @@ body {
         background-size: 95% auto;
       }
       .node-label {
-        font-size: 9px;
+        font-size: var(--fs-micro);
         padding: 2px 6px;
       }
 
@@ -2630,7 +2698,7 @@ body {
         letter-spacing: 4px;
       }
       .cyber-sub {
-        font-size: 8px;
+        font-size: var(--fs-micro);
         letter-spacing: 3px;
       }
 
@@ -2768,7 +2836,7 @@ body {
         ) !important;
       }
       .hero h1 {
-        font-size: 28px;
+        font-size: 26px;
         letter-spacing: -0.3px;
       }
       .tagline {
@@ -2780,7 +2848,7 @@ body {
         padding-right: 16px;
       }
       .hero-content p {
-        font-size: 13.5px;
+        font-size: var(--fs-body);
       }
       .hero-buttons a {
         padding: 14px 18px;
@@ -2809,13 +2877,13 @@ body {
 
       /* ---- Categories ---- */
       .categories-section {
-        padding: 20px 0;
+        padding: 26px 0;
       }
       .category-card {
-        padding: 14px 8px;
+        padding: 16px 8px;
       }
       .category-title {
-        font-size: 9px;
+        font-size: 10px;
       }
 
       /* ---- Brand ---- */
@@ -2844,7 +2912,7 @@ body {
         letter-spacing: 2px;
       }
       .space-banner-sub {
-        font-size: 9px;
+        font-size: var(--fs-micro);
       }
       .space-banner-graphic {
         flex-wrap: wrap;
@@ -2866,12 +2934,12 @@ body {
         letter-spacing: 3px;
       }
       .cyber-sub {
-        font-size: 8px;
+        font-size: var(--fs-micro);
         letter-spacing: 2px;
       }
       .btn-cyber-x {
         padding: 7px 14px;
-        font-size: 9px;
+        font-size: var(--fs-micro);
       }
 
       /* ---- School ---- */
@@ -2902,7 +2970,7 @@ body {
         font-size: 18px;
       }
       .testimonial-quote {
-        font-size: 12px;
+        font-size: var(--fs-body);
       }
 
       /* ---- Apply ---- */
@@ -3002,6 +3070,8 @@ body {
     .hero-title .hero-line {
       display: block;
       overflow: hidden;
+      padding-bottom: 0.14em;
+      margin-bottom: -0.14em;
     }
 
     .hero-title .hero-line-inner {
@@ -3013,6 +3083,14 @@ body {
     .hero-title .hero-line:nth-child(1) .hero-line-inner { animation-delay: 0.2s; }
     .hero-title .hero-line:nth-child(2) .hero-line-inner { animation-delay: 0.35s; }
     .hero-title .hero-line:nth-child(3) .hero-line-inner { animation-delay: 0.5s; }
+
+    /* Longest line: keep "Intelligence & Innovation." on a single line */
+    .hero-title .hero-line:nth-child(3) .hero-line-inner {
+      white-space: nowrap;
+      font-size: clamp(20px, 4.2vw, 32px);
+      letter-spacing: -0.6px;
+      line-height: 1.3;
+    }
 
     @keyframes hero-line-in {
       to { transform: translateY(0); }
@@ -3552,7 +3630,7 @@ body {
       </div>
       <div class="stat-item">
         <h2>1</h2>
-        <p>One Connected<br>Ecosystem</p>
+        <p>One Connected Ecosystem</p>
       </div>
     </section>
   </div>
@@ -3598,22 +3676,22 @@ body {
       </svg>
 
       <div class="eco-node eco-antellay-top">
-        <span class="node-label">ANTELLAY</span>
+        <a class="node-label" href="https://antellay.in/" target="_blank" rel="noopener">ANTELLAY</a>
         <div class="node-dot"></div>
       </div>
 
       <div class="eco-node eco-celebsox">
-        <span class="node-label">CelebsoX</span>
+        <a class="node-label" href="https://app.celebso.com/" target="_blank" rel="noopener">CelebsoX</a>
         <div class="node-dot"></div>
       </div>
 
       <div class="eco-node eco-nxtfund">
-        <span class="node-label">NXTFund</span>
+        <a class="node-label" href="https://www.nxtfund.in/" target="_blank" rel="noopener">NXTFund</a>
         <div class="node-dot"></div>
       </div>
 
       <div class="eco-node eco-productions">
-        <span class="node-label">Celebso Productions</span>
+        <a class="node-label" href="https://productions.celebso.com/" target="_blank" rel="noopener">Celebso Productions</a>
         <div class="node-dot"></div>
       </div>
 
@@ -3626,12 +3704,12 @@ body {
       </div>
 
       <div class="eco-node eco-antellay-space">
-        <span class="node-label">ANTELLAY Space</span>
+        <a class="node-label" href="https://antellay.space/" target="_blank" rel="noopener">ANTELLAY Space</a>
         <div class="node-dot"></div>
       </div>
 
       <div class="eco-node eco-byizon">
-        <span class="node-label">ByiZon.ai</span>
+        <a class="node-label" href="https://byizon.in/" target="_blank" rel="noopener">ByiZon.ai</a>
         <div class="node-dot"></div>
       </div>
 
@@ -3640,33 +3718,33 @@ body {
       </div>
 
       <div class="eco-node eco-numerixx">
-        <span class="node-label">NumeriXX</span>
+        <a class="node-label" href="https://numerixx.com/" target="_blank" rel="noopener">NumeriXX</a>
         <div class="node-dot"></div>
       </div>
 
       <div class="eco-node eco-school">
         <div class="node-dot"></div>
-        <span class="node-label">Celebso School</span>
+        <a class="node-label" href="https://school.celebso.com/" target="_blank" rel="noopener">Celebso School</a>
       </div>
 
       <div class="eco-node eco-triphike">
         <div class="node-dot"></div>
-        <span class="node-label">thetriphike</span>
+        <a class="node-label" href="https://veirakhas.world/" target="_blank" rel="noopener">veirakhas</a>
       </div>
 
       <div class="eco-node eco-startup-valley">
-        <span class="node-label">Startup Valley</span>
+        <a class="node-label" href="https://startupvalley.in/" target="_blank" rel="noopener">Startup Valley</a>
         <div class="node-dot"></div>
       </div>
 
       <div class="eco-node eco-spacerentiya">
         <div class="node-dot"></div>
-        <span class="node-label">SpaceRentiya</span>
+        <a class="node-label" href="https://spacerentiya.in/" target="_blank" rel="noopener">SpaceRentiya</a>
       </div>
 
       <div class="eco-node eco-grehni">
         <div class="node-dot"></div>
-        <span class="node-label">Grehni.ai</span>
+        <a class="node-label" href="https://grehni.antellay.in/" target="_blank" rel="noopener">Grehni.ai</a>
       </div>
     </section>
   </div>
@@ -3821,7 +3899,7 @@ body {
       <section class="featured-section" data-reveal="left">
         <div class="featured-header">
           <div class="featured-title-wrap">
-            <h2>Featured Brand's</h2>
+            <h2>Featured Brands</h2>
           </div>
           <a href="/VENTURES" class="view-all-link">View All Companies</a>
         </div>
@@ -3837,7 +3915,7 @@ body {
                 <span class="tag">AI/ML</span>
                 <span class="tag">Treasury</span>
               </div>
-              <a href="https://celebso.com/" target="_blank" rel="noopener" class="btn-site">Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://app.celebso.com/" target="_blank" rel="noopener" class="btn-site">Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
           </div>
           <div class="side-brands-stack">
@@ -3867,7 +3945,7 @@ body {
               </div>
               <div class="side-card-content">
                 <h3>A N T E L L A Y</h3>
-                <p style="font-size:8px; font-weight:800; color:#ea580c; letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">AI &middot; Engineering &middot; Technology</p>
+                <p class="card-eyebrow">AI &middot; Engineering &middot; Technology</p>
                 <p>Building technology and intelligence solutions for the next generation of digital and physical infrastructure.</p>
                 <a href="https://antellay.in/" target="_blank" rel="noopener" class="btn-site">Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
               </div>

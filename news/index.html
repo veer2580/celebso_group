@@ -38,6 +38,11 @@
 
   <style>
     /* Global Reset & Styling */
+    :root {
+      --fs-body: clamp(13px, 0.2vw + 12px, 14px);
+      --fs-micro: clamp(9.5px, 0.15vw + 9px, 10.5px);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -93,7 +98,7 @@ body {
     }
 
     .hero-left p {
-      font-size: 11.5px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.6;
     }
@@ -180,7 +185,7 @@ body {
     }
 
     .story-desc {
-      font-size: 11px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.6;
       margin-bottom: 16px;
@@ -236,7 +241,7 @@ body {
     }
 
     .news-header-left p {
-      font-size: 10.5px;
+      font-size: var(--fs-body);
       color: #64748b;
     }
 
@@ -249,7 +254,7 @@ body {
     .tab-btn {
       background: #ffffff;
       border: 1px solid #e2e8f0;
-      font-size: 8.5px;
+      font-size: var(--fs-micro);
       font-weight: 800;
       padding: 5px 10px;
       border-radius: 4px;
@@ -311,7 +316,7 @@ body {
     }
 
     .card-snippet {
-      font-size: 10px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.5;
       margin-bottom: 16px;
@@ -322,7 +327,7 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 9px;
+      font-size: var(--fs-micro);
       color: #94a3b8;
       font-weight: 600;
       padding-top: 10px;
@@ -333,7 +338,7 @@ body {
       color: #0f172a;
       text-decoration: none;
       font-weight: 700;
-      font-size: 9px;
+      font-size: var(--fs-micro);
     }
 
     /* ================= 4. NEWS ACROSS OUR ECOSYSTEM ================= */
@@ -352,7 +357,7 @@ body {
     }
 
     .eco-header p {
-      font-size: 10.5px;
+      font-size: var(--fs-body);
       color: #64748b;
     }
 
@@ -401,7 +406,7 @@ body {
     }
 
     .eco-brand-name {
-      font-size: 9px;
+      font-size: var(--fs-micro);
       font-weight: 800;
       letter-spacing: 0.5px;
       color: #0f172a;
@@ -457,7 +462,7 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 8.5px;
+      font-size: var(--fs-micro);
       color: #94a3b8;
     }
 
@@ -500,7 +505,7 @@ body {
     }
 
     .press-banner-left p {
-      font-size: 10px;
+      font-size: var(--fs-body);
       color: #94a3b8;
       max-width: 480px;
       line-height: 1.5;
@@ -571,7 +576,7 @@ body {
     }
 
     .sub-text-desc {
-      font-size: 10px;
+      font-size: var(--fs-body);
       color: #64748b;
     }
 
@@ -616,7 +621,7 @@ body {
     }
 
     .bottom-cta p {
-      font-size: 10.5px;
+      font-size: var(--fs-body);
       color: #64748b;
       margin-bottom: 20px;
     }
@@ -880,7 +885,7 @@ body {
         border-radius: 20px;
       }
       nav a:not(.btn-funding) {
-        font-size: 9px;
+        font-size: var(--fs-micro);
         padding: 5px 7px;
       }
       .btn-funding {
@@ -1537,7 +1542,7 @@ body {
           </div>
           <div class="eco-brand-item">
             <div class="eco-brand-icon">N</div>
-            <span class="eco-brand-name">NUMEREXX</span>
+              <span class="eco-brand-name">NUMERIXX</span>
           </div>
           <div class="eco-brand-item">
             <div class="eco-brand-icon">$</div>

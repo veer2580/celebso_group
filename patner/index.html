@@ -57,6 +57,11 @@
         }
     </script>
     <style>
+        :root {
+          --fs-body: clamp(13px, 0.2vw + 12px, 14px);
+          --fs-micro: clamp(9.5px, 0.15vw + 9px, 10.5px);
+        }
+
         html, body { overflow-x: hidden; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; padding-top: 76px; overflow-x: hidden; }
 
@@ -213,7 +218,7 @@
                 border-radius: 20px;
             }
             nav a:not(.btn-funding) {
-                font-size: 9px;
+                font-size: var(--fs-micro);
                 padding: 5px 7px;
             }
             .btn-funding {
@@ -729,7 +734,7 @@
                 <h4 class="font-bold text-gray-900 mb-1">Startup Chaupal</h4>
                 <p class="text-xs font-semibold text-brand-orange mb-4">Startup Ecosystem Partner</p>
                 <p class="text-sm text-gray-500 mb-6 flex-grow leading-relaxed">Connecting founders, investors and ecosystem stakeholders.</p>
-                <a href="#" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
+                <a href="https://www.startupchaupal.com/" target="_blank" rel="noopener" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
                     View Partner <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
                 </a>
             </div>
@@ -739,7 +744,7 @@
                 <h4 class="font-bold text-gray-900 mb-1">Marwari Catalysts</h4>
                 <p class="text-xs font-semibold text-brand-orange mb-4">Investment & Startup Partner</p>
                 <p class="text-sm text-gray-500 mb-6 flex-grow leading-relaxed">Supporting high-potential startups through investment and mentorship.</p>
-                <a href="#" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
+                <a href="https://www.marwaricatalysts.com/home.php" target="_blank" rel="noopener" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
                     View Partner <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
                 </a>
             </div>
@@ -749,7 +754,7 @@
                 <h4 class="font-bold text-gray-900 mb-1">iStart Rajasthan</h4>
                 <p class="text-xs font-semibold text-brand-orange mb-4">Startup Ecosystem Partner</p>
                 <p class="text-sm text-gray-500 mb-6 flex-grow leading-relaxed">Supporting Rajasthan's startup ecosystem through incubation and mentorship.</p>
-                <a href="#" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
+                <a href="https://talent.istart.rajasthan.gov.in/" target="_blank" rel="noopener" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
                     View Partner <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
                 </a>
             </div>
@@ -769,7 +774,7 @@
                 <h4 class="font-bold text-gray-900 mb-1">Zoho</h4>
                 <p class="text-xs font-semibold text-brand-orange mb-4">Technology Partner</p>
                 <p class="text-sm text-gray-500 mb-6 flex-grow leading-relaxed">Empowering startups with business software and productivity solutions.</p>
-                <a href="#" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
+                <a href="https://www.zoho.com/" target="_blank" rel="noopener" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
                     View Partner <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
                 </a>
             </div>
@@ -779,7 +784,7 @@
                 <h4 class="font-bold text-gray-900 mb-1">WhatsApp</h4>
                 <p class="text-xs font-semibold text-brand-orange mb-4">Communication Partner</p>
                 <p class="text-sm text-gray-500 mb-6 flex-grow leading-relaxed">Helping businesses connect with customers through messaging.</p>
-                <a href="#" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
+                <a href="https://web.whatsapp.com/" target="_blank" rel="noopener" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
                     View Partner <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
                 </a>
             </div>
@@ -789,7 +794,7 @@
                 <h4 class="font-bold text-gray-900 mb-1">AllEvents</h4>
                 <p class="text-xs font-semibold text-brand-orange mb-4">Events & Community Partner</p>
                 <p class="text-sm text-gray-500 mb-6 flex-grow leading-relaxed">Connecting founders and communities through events and experiences.</p>
-                <a href="#" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
+                <a href="https://allevents.in/" target="_blank" rel="noopener" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
                     View Partner <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
                 </a>
             </div>
@@ -799,7 +804,7 @@
                 <h4 class="font-bold text-gray-900 mb-1">IDFC FIRST Bank</h4>
                 <p class="text-xs font-semibold text-brand-orange mb-4">Banking Partner</p>
                 <p class="text-sm text-gray-500 mb-6 flex-grow leading-relaxed">Supporting entrepreneurs and businesses with modern financial solutions.</p>
-                <a href="#" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
+                <a href="https://www.idfcfirst.bank.in/" target="_blank" rel="noopener" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
                     View Partner <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
                 </a>
             </div>
@@ -809,7 +814,7 @@
                 <h4 class="font-bold text-gray-900 mb-1">Leads AI</h4>
                 <p class="text-xs font-semibold text-brand-orange mb-4">Lead Generation Partner</p>
                 <p class="text-sm text-gray-500 mb-6 flex-grow leading-relaxed">Get more leads &amp; dominate your competition.</p>
-                <a href="#" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
+                <a href="https://uncoverddeal.com/" target="_blank" rel="noopener" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
                     View Partner <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
                 </a>
             </div>
@@ -819,7 +824,7 @@
                 <h4 class="font-bold text-gray-900 mb-1">Volimy</h4>
                 <p class="text-xs font-semibold text-brand-orange mb-4">Water Infrastructure Partner</p>
                 <p class="text-sm text-gray-500 mb-6 flex-grow leading-relaxed">Volimy is India's water supply management platform.</p>
-                <a href="#" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
+                <a href="https://volimy.com/" target="_blank" rel="noopener" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
                     View Partner <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
                 </a>
             </div>
@@ -829,7 +834,7 @@
                 <h4 class="font-bold text-gray-900 mb-1">Getgabs</h4>
                 <p class="text-xs font-semibold text-brand-orange mb-4">WhatsApp Automation Partner</p>
                 <p class="text-sm text-gray-500 mb-6 flex-grow leading-relaxed">AI-based WhatsApp automation platform for marketing, sales CRM, and customer support.</p>
-                <a href="#" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
+                <a href="https://getgabs.com/" target="_blank" rel="noopener" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
                     View Partner <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
                 </a>
             </div>
@@ -839,7 +844,7 @@
                 <h4 class="font-bold text-gray-900 mb-1">Scale</h4>
                 <p class="text-xs font-semibold text-brand-orange mb-4">AI Data Partner</p>
                 <p class="text-sm text-gray-500 mb-6 flex-grow leading-relaxed">Scale delivers proven data, evaluations, and outcomes to AI labs.</p>
-                <a href="#" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
+                <a href="https://scale.com/" target="_blank" rel="noopener" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
                     View Partner <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
                 </a>
             </div>
@@ -849,7 +854,7 @@
                 <h4 class="font-bold text-gray-900 mb-1">Markifid</h4>
                 <p class="text-xs font-semibold text-brand-orange mb-4">Growth & Technology Partner</p>
                 <p class="text-sm text-gray-500 mb-6 flex-grow leading-relaxed">Markifid is India's full-service growth agency offering IT services.</p>
-                <a href="#" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
+                <a href="https://markifid.com/" target="_blank" rel="noopener" class="text-brand-orange text-sm font-medium hover:underline inline-flex items-center">
                     View Partner <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
                 </a>
             </div>

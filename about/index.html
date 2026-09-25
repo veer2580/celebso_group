@@ -38,6 +38,11 @@
 
   <style>
     /* ===== GLOBAL RESET & BASE ===== */
+    :root {
+      --fs-body: clamp(13px, 0.2vw + 12px, 14px);
+      --fs-micro: clamp(9.5px, 0.15vw + 9px, 10.5px);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -101,7 +106,7 @@ body {
     }
 
     .hero-text-sub {
-      font-size: 14px;
+      font-size: var(--fs-body);
       color: #475569;
       margin-bottom: 16px;
       line-height: 1.6;
@@ -111,7 +116,7 @@ body {
     }
 
     .hero-text-lead {
-      font-size: 14.5px;
+      font-size: var(--fs-body);
       font-weight: 700;
       color: #0f172a;
       line-height: 1.65;
@@ -190,7 +195,7 @@ body {
     }
 
     .vision-right-text {
-      font-size: 12.5px;
+      font-size: var(--fs-body);
       color: #475569;
       line-height: 1.7;
     }
@@ -228,7 +233,7 @@ body {
     }
 
     .mission-right {
-      font-size: 11.5px;
+      font-size: var(--fs-body);
       color: #475569;
       line-height: 1.65;
     }
@@ -262,7 +267,7 @@ body {
     }
 
     .dark-lead {
-      font-size: 15px;
+      font-size: var(--fs-body);
       font-weight: 700;
       color: #f59e0b;
       line-height: 1.5;
@@ -270,7 +275,7 @@ body {
     }
 
     .dark-desc {
-      font-size: 11.5px;
+      font-size: var(--fs-body);
       color: #94a3b8;
       line-height: 1.65;
     }
@@ -327,7 +332,7 @@ body {
     }
 
     .px-timeline-text {
-      font-size: 10.5px;
+      font-size: var(--fs-body);
       color: #94a3b8;
       line-height: 1.5;
       margin-top: 8px;
@@ -391,7 +396,7 @@ body {
     }
 
     .founder-desc {
-      font-size: 11px;
+      font-size: var(--fs-body);
       color: #475569;
       line-height: 1.6;
     }
@@ -411,7 +416,7 @@ body {
     }
 
     .quote-text {
-      font-size: 14.5px;
+      font-size: var(--fs-body);
       font-weight: 600;
       font-style: italic;
       color: #0f172a;
@@ -486,7 +491,7 @@ body {
     }
 
     .card-bold-desc {
-      font-size: 10.5px;
+      font-size: var(--fs-body);
       font-weight: 700;
       color: #1e293b;
       line-height: 1.4;
@@ -494,7 +499,7 @@ body {
     }
 
     .card-sub-desc {
-      font-size: 10px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.5;
     }
@@ -521,7 +526,7 @@ body {
     }
 
     .ecosystem-left-desc {
-      font-size: 12px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.6;
     }
@@ -644,7 +649,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 9px;
+      font-size: var(--fs-micro);
       font-weight: 800;
     }
 
@@ -661,7 +666,7 @@ body {
     }
 
     .node-type {
-      font-size: 7.5px;
+      font-size: var(--fs-micro);
       color: #64748b;
       font-weight: 600;
     }
@@ -744,7 +749,7 @@ body {
     }
 
     .node-desc {
-      font-size: 10.5px;
+      font-size: var(--fs-body);
       color: #64748b;
       line-height: 1.5;
       padding: 0 12px;
@@ -987,7 +992,7 @@ body {
         font-size: 25px;
       }
       .hero-text-sub, .hero-text-lead {
-        font-size: 13.5px;
+        font-size: var(--fs-body);
       }
       .world-map-bg {
         height: 160px;
@@ -1004,19 +1009,19 @@ body {
       .node-badge {
         width: 16px;
         height: 16px;
-        font-size: 7px;
+        font-size: var(--fs-micro);
       }
       .node-name {
-        font-size: 8px;
+        font-size: var(--fs-micro);
       }
       .node-type {
-        font-size: 6px;
+        font-size: var(--fs-micro);
       }
       .center-hub .title {
-        font-size: 8px;
+        font-size: var(--fs-micro);
       }
       .center-hub .sub {
-        font-size: 7px;
+        font-size: var(--fs-micro);
       }
       .founder-photo-wrap {
         height: 180px;
@@ -1036,13 +1041,13 @@ body {
         gap: 20px;
       }
       .quote-text {
-        font-size: 13px;
+        font-size: var(--fs-body);
       }
       .dark-lead {
-        font-size: 13.5px;
+        font-size: var(--fs-body);
       }
       .dark-desc, .ecosystem-left-desc, .mission-right {
-        font-size: 11px;
+        font-size: var(--fs-body);
       }
     }
 
@@ -1203,7 +1208,7 @@ body {
         border-radius: 20px;
       }
       nav a:not(.btn-funding) {
-        font-size: 9px;
+        font-size: var(--fs-micro);
         padding: 5px 7px;
       }
       .btn-funding {
@@ -1860,7 +1865,7 @@ body {
             <div class="node-pill pos-left">
               <div class="node-badge">N</div>
               <div class="node-info">
-                <span class="node-name">NUMEREXX</span>
+                  <span class="node-name">NUMERIXX</span>
                 <span class="node-type">Intelligence &middot; Data</span>
               </div>
             </div>
